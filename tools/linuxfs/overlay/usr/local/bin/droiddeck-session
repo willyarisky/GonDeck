@@ -173,9 +173,15 @@ if [ -z "${BL_INSIDE:-}" ]; then
     wayland-info >/dev/null 2>&1 && break
     sleep 0.1
   done
-  if [ "$mode" = lxqt ]; then
+  if [ "$mode" = lxqt ] || [ ! -e /sys/class/kgsl/kgsl-3d0 ]; then
     step "starting the desktop"
     start_agent --no-focus
+    if [ ! -e /sys/class/kgsl/kgsl-3d0 ]; then
+      export BL_DESKTOP=1
+      export BL_STEAM_UI=desktop
+      echo "== starting Steam Desktop directly under Wayland compositor on Mali"
+      (/usr/local/bin/droiddeck-steam-launch desktop &) 2>/dev/null || true
+    fi
     [ -x /usr/local/bin/droiddeck-desktop ] || { echo "== the desktop package is not installed"; exit 66; }
     cores=$(program_cores)
     if [ -n "$cores" ]; then
