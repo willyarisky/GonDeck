@@ -344,7 +344,7 @@ class SessionService : Service() {
         }
         guest.add("BL_LAUNCH_DIR=" + sessionRoot.path)
         GameStorage.effective(this)?.let { guest.add("BL_LIBRARY_LABEL=" + it.label.replace('"', ' ')) }
-        if (SessionState.mode == MODE_STEAM && SessionState.steamUi == "desktop") guest.add("BL_STEAM_UI=desktop")
+        if (SessionState.mode == MODE_STEAM && (SessionState.steamUi == "desktop" || !com.droiddeck.launcher.core.DeviceSupport.adreno())) guest.add("BL_STEAM_UI=desktop")
         val shellGuest = ArrayList(guest).apply {
             add("SHELL=/bin/bash")
             add("TERM=xterm-256color")
