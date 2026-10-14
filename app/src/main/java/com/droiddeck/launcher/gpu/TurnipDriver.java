@@ -281,6 +281,10 @@ public final class TurnipDriver {
             if (forced.startsWith("a7")) return DRIVER_A7XX;
             if (forced.startsWith("a6")) return DRIVER_A6XX;
         }
+        if (new File("/dev/mali0").exists() || !new File("/sys/class/kgsl/kgsl-3d0").exists()) {
+            Log.i(TAG, "Mali or non-Adreno GPU detected -> defaulting to system Vulkan driver");
+            return null;
+        }
         String model = gpuModel();
         Log.i(TAG, "gpu model: " + (model == null ? "unknown" : model));
         if (model != null) {

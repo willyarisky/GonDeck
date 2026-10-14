@@ -1,11 +1,17 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="artwork/droiddeck-banner-dark.svg">
-    <img alt="DroidDeck" src="artwork/droiddeck-banner-light.svg" width="100%">
-  </picture>
-</p>
+# GonDeck 🚀
 
-DroidDeck brings the SteamOS experience to Android: Valve's Steam client in Big Picture on your Adreno handheld, with Windows games through Valve's ARM64 Proton.
+**GonDeck** brings the full SteamOS experience and PC gaming ecosystem to Android: Valve's Steam client in Big Picture mode with Windows games through Valve's ARM64 Proton and FEX-Emu.
+
+Forked from DroidDeck, **GonDeck** extends support beyond Qualcomm Adreno to **ARM Mali GPUs (Google Tensor G2/G3/G4, MediaTek Dimensity)** using custom Vulkan layers and [malitools](https://github.com/willyarisky/malitools).
+
+---
+
+## 🌟 What makes GonDeck different?
+
+- **ARM Mali & Google Tensor Support:** Native detection and fallback to system Vulkan drivers and custom `malitools` shims for Mali-G710 / Valhall GPUs (Pixel 7/8/9 series).
+- **Automated Phantom Process Fix:** Seamlessly configures Android 12-15 phantom process restrictions without manual headache.
+- **Enhanced Compositor:** Direct Wayland dmabuf compositing on Android `libvulkan.so` without requiring Adreno Turnip.
+- **Adreno & Snapdragon Handhelds:** Full upstream support for Adreno 7xx/8xx via Turnip remains fully intact.
 
 <p align="center"><a href="https://discord.gg/JRGAvawjsm"><img src="https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?logo=discord&logoColor=white" alt="Join the DroidDeck Discord"></a></p>
 

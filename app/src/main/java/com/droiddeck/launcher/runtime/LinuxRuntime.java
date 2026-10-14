@@ -81,6 +81,12 @@ public final class LinuxRuntime {
         File icdDir = new File(rootDir(context), "usr/share/vulkan/icd.d");
         File[] manifests = icdDir.listFiles((dir, name) -> name.endsWith(".json"));
         if (manifests == null) return null;
+        boolean hasAdreno = new File("/sys/class/kgsl/kgsl-3d0").exists();
+        if (!hasAdreno) {
+            for (File manifest : manifests) {
+                if (!manifest.getName().contains("freedreno")) return manifest;
+            }
+        }
         for (File manifest : manifests) {
             if (manifest.getName().contains("freedreno")) return manifest;
         }
