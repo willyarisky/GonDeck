@@ -34,6 +34,8 @@ object SessionFiles {
         WinComponents.publish(context)
         val files = arrayOf(
             "usr/local/bin/droiddeck-desktop" to "usr/local/bin/droiddeck-desktop",
+            "usr/local/lib/libmalivkshim.so" to "usr/local/lib/libmalivkshim.so",
+            "usr/share/vulkan/icd.d/mali_shim.json" to "usr/share/vulkan/icd.d/mali_shim.json",
             "usr/local/bin/droiddeck-game-env" to "usr/local/bin/droiddeck-game-env",
             "usr/local/bin/droiddeck-wincomponents" to "usr/local/bin/droiddeck-wincomponents",
             "usr/local/bin/droiddeck-msi-install" to "usr/local/bin/droiddeck-msi-install",

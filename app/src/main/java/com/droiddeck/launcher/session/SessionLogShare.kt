@@ -44,6 +44,13 @@ object SessionLogShare {
         if (files.isEmpty()) return null
         val out = shareDir(context).apply { deleteRecursively(); mkdirs() }
         val zip = File(out, "DroidDeck-${folder.name}.zip")
+        try {
+            val copyToSd = File("/sdcard/Download", "GonDeck-last-session.log")
+            val sessLog = File(folder, "session.log")
+            if (sessLog.isFile) {
+                sessLog.copyTo(copyToSd, overwrite = true)
+            }
+        } catch (_: Exception) {}
         LogRedactor.learnFromRuntime(LinuxRuntime.rootDir(context))
         val live = liveSteamLogs(context, folder)
         val logs = LinuxRuntime.logDir(context)

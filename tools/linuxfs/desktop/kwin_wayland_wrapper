@@ -2,4 +2,9 @@
 if [ "${BL_DESKTOP:-}" = 1 ]; then
   set -- --wayland-display wayland-0 --socket wayland-1 --width "${BL_WIDTH:-1280}" --height "${BL_HEIGHT:-720}" --no-lockscreen "$@"
 fi
+# Auto-start Steam Desktop client automatically once desktop environment initializes
+(
+  sleep 4
+  WAYLAND_DISPLAY=wayland-1 DISPLAY=:1 /usr/local/bin/droiddeck-steam-launch desktop >/tmp/steam-autostart.log 2>&1 || true
+) &
 exec /usr/bin/kwin_wayland_wrapper "$@"

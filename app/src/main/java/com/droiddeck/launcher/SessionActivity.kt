@@ -1932,11 +1932,7 @@ class SessionActivity : ComponentActivity(), SurfaceHolder.Callback {
         routedTouchMode = next
     }
 
-    private fun usingTouchpad(): Boolean = when (routedTouchMode) {
-        SessionPrefs.TOUCH_PAD -> true
-        SessionPrefs.TOUCH_DIRECT -> false
-        else -> SessionState.mode != SessionService.MODE_STEAM || SessionState.steamUi == "desktop"
-    }
+    private fun usingTouchpad(): Boolean = false
 
     private fun drawnRect(): android.graphics.RectF? {
         val width = surfaceView.width.takeIf { it > 0 } ?: return null

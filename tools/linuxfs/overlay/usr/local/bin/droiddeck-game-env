@@ -323,8 +323,15 @@ def main():
             fixes["LIBGL_KOPPER_DRI2"] = "true"
             fixes["DXVK_ASYNC"] = "1"
             fixes["DXVK_FILTER_DEVICE_NAME"] = "Mali-G710"
-            fixes["VK_ICD_FILENAMES"] = "/usr/share/vulkan/icd.d/mali.json"
-            print("droiddeck-game-env: ARM Mali detected -> enabled Zink fallback for game rendering", file=sys.stderr)
+            fixes["PROTON_USE_WINED3D"] = "0"
+            fixes["VK_ICD_FILENAMES"] = "/usr/share/vulkan/icd.d/mali_shim.json"
+            log_dir = "/sdcard/Android/data/com.droiddeck.launcher/files"
+            fixes["PROTON_LOG"] = "1"
+            fixes["PROTON_LOG_DIR"] = log_dir
+            fixes["DXVK_LOG_PATH"] = log_dir
+            fixes["DXVK_LOG_LEVEL"] = "debug"
+            fixes["WINEDEBUG"] = "warn+all,err+all"
+            print("droiddeck-game-env: ARM Mali detected -> enabled Zink fallback & SD log export for game rendering", file=sys.stderr)
         path = Path.home() / ".config/droiddeck/game-environment.json"
         try:
             with path.open(encoding="utf-8") as source:

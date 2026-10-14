@@ -424,6 +424,15 @@ case $mode in
       droiddeck-steam-shortcuts "$steam_root" "$BL_ADDED_GAMES" || true
     fi
     droiddeck-seed-redists "$steam_root" || true
+
+    # Auto-request FEX-Emu (3127680) & SteamLinuxRuntime Sniper (1628350)
+    for _dep_app in 3127680 1628350; do
+      if [ ! -f "$steam_root/steamapps/appmanifest_${_dep_app}.acf" ]; then
+        step "asking client to fetch x86 translation component ${_dep_app}"
+        set -- "$@" "steam://install/${_dep_app}"
+      fi
+    done
+
     if [ ! -f "$steam_root/steamapps/appmanifest_4427310.acf" ]; then
       step "asking the client to fetch the ARM64 Proton"
       set -- "$@" steam://install/4427310
