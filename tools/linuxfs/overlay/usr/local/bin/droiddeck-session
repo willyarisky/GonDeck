@@ -185,13 +185,9 @@ if [ -z "${BL_INSIDE:-}" ]; then
     exec /usr/local/bin/droiddeck-desktop
   fi
   if [ ! -e /sys/class/kgsl/kgsl-3d0 ]; then
-    step "starting steam under native wayland for ARM Mali"
-    export BL_INSIDE=1
-    export BL_STEAM_UI=desktop
-    export DISPLAY=:0
-    (Xwayland :0 -ac >/dev/null 2>&1 &) || true
-    sleep 0.5
-    exec "$0" "$mode" "$@"
+    step "starting KDE desktop environment for ARM Mali"
+    export BL_DESKTOP=1
+    exec /usr/local/bin/droiddeck-desktop
   fi
   width=${BL_WIDTH:-1280}
   height=${BL_HEIGHT:-720}

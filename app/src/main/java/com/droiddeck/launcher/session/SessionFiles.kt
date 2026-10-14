@@ -33,6 +33,7 @@ object SessionFiles {
         GameEnvironmentStore.publish(context)
         WinComponents.publish(context)
         val files = arrayOf(
+            "usr/local/bin/droiddeck-desktop" to "usr/local/bin/droiddeck-desktop",
             "usr/local/bin/droiddeck-game-env" to "usr/local/bin/droiddeck-game-env",
             "usr/local/bin/droiddeck-wincomponents" to "usr/local/bin/droiddeck-wincomponents",
             "usr/local/bin/droiddeck-msi-install" to "usr/local/bin/droiddeck-msi-install",
