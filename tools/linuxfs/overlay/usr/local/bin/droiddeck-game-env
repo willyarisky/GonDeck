@@ -315,6 +315,15 @@ def main():
             if components:
                 own = fixes.get("WINEDLLOVERRIDES")
                 fixes["WINEDLLOVERRIDES"] = components + ";" + own if own else components
+
+        # If running on ARM Mali (Tensor G2, etc.), inject Zink OpenGL & Malitools Vulkan fallback
+        if not os.path.exists("/sys/class/kgsl/kgsl-3d0"):
+            fixes["MESA_LOADER_DRIVER_OVERRIDE"] = "zink"
+            fixes["GALLIUM_DRIVER"] = "zink"
+            fixes["LIBGL_KOPPER_DRI2"] = "true"
+            fixes["PROTON_USE_WINED3D"] = "1"
+            fixes["DXVK_ASYNC"] = "1"
+            print("droiddeck-game-env: ARM Mali detected -> enabled WineD3D / Zink fallback for game rendering", file=sys.stderr)
         path = Path.home() / ".config/droiddeck/game-environment.json"
         try:
             with path.open(encoding="utf-8") as source:
