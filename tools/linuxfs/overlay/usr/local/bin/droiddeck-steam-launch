@@ -14,6 +14,10 @@ esac
 if [ "$ui" = desktop ] && [ "${BL_DESKTOP:-}" = 1 ]; then
   steam_root=${XDG_DATA_HOME:-${HOME:-/root}/.local/share}/Steam
   export LD_LIBRARY_PATH=$steam_root/steamrtarm64:$steam_root/steamrtarm64/panorama${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+  # Disable Zink forcing on Mali for Steam client UI itself to prevent GLX/Zink physical device initialization failure
+  unset MESA_LOADER_DRIVER_OVERRIDE GALLIUM_DRIVER LIBGL_KOPPER_DRI2
+  export LIBGL_ALWAYS_SOFTWARE=1
+  export GALLIUM_DRIVER=llvmpipe
   mkdir -p "${XDG_CACHE_HOME:-$HOME/.cache}/droiddeck"
   exec 9>"${XDG_CACHE_HOME:-$HOME/.cache}/droiddeck/steam-desktop.lock"
   if ! flock -n 9; then

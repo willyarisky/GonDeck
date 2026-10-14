@@ -719,6 +719,9 @@ BUSCONF
     fi
     if [ ! -e /sys/class/kgsl/kgsl-3d0 ]; then
       echo "== steam: ARM Mali / Non-Adreno detected -> disabling CEF GPU hardware acceleration to avoid ANGLE Vulkan crash"
+      unset MESA_LOADER_DRIVER_OVERRIDE GALLIUM_DRIVER LIBGL_KOPPER_DRI2
+      export LIBGL_ALWAYS_SOFTWARE=1
+      export GALLIUM_DRIVER=llvmpipe
       _bl_cef=(-cef-disable-gpu -no-cef-sandbox -cef-ozone-platform=x11)
       if [ "${BL_STEAM_UI:-}" != gamepadui ]; then
         _bl_ui=(-nobigpicture)
