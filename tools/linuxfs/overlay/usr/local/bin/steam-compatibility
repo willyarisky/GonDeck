@@ -901,7 +901,7 @@ def plan_mapping(current, installed, runnable, default, auto, native=None, picks
                 kept[app] = target
             continue
         mine = auto.get(app)
-        target = native.get(app, default)
+        target = TOOL
         stale = unrunnable(name, runnable) or (app in native and linux_runtime_tool(name))
         if name and not stale and (mine is None or name != mine):
             continue

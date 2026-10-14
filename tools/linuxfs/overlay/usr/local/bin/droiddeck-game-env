@@ -322,6 +322,8 @@ def main():
             fixes["GALLIUM_DRIVER"] = "zink"
             fixes["LIBGL_KOPPER_DRI2"] = "true"
             fixes["DXVK_ASYNC"] = "1"
+            fixes["DXVK_FILTER_DEVICE_NAME"] = "Mali-G710"
+            fixes["VK_ICD_FILENAMES"] = "/usr/share/vulkan/icd.d/mali.json"
             print("droiddeck-game-env: ARM Mali detected -> enabled Zink fallback for game rendering", file=sys.stderr)
         path = Path.home() / ".config/droiddeck/game-environment.json"
         try:
