@@ -187,11 +187,6 @@ if [ -z "${BL_INSIDE:-}" ]; then
   if [ ! -e /sys/class/kgsl/kgsl-3d0 ]; then
     step "starting KDE desktop environment for ARM Mali"
     export BL_DESKTOP=1
-    # Auto-force Proton ARM64 for all titles automatically
-    (
-      sleep 5
-      python3 /usr/local/bin/steam-compatibility "$steam_root" >/dev/null 2>&1 || true
-    ) &
     exec /usr/local/bin/droiddeck-desktop
   fi
   width=${BL_WIDTH:-1280}

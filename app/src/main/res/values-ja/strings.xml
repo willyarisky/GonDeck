@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DroidDeck</string>
+    <string name="app_name">BrainDeck</string>
     <string-array name="loading_hints">
         <item>初回起動時はSteamをダウンロードします。数分かかる場合があります。</item>
         <item>デフォルトでは、アプリを離れるとSteamが一時停止し、戻ると前回の続きから再開します。</item>
@@ -74,10 +74,10 @@
     <string name="game_env_vkd3d_config">D3D12のVKD3Dオプション。nodxrはレイトレーシングを無効にします。ゲームが必要とする場合のみ使用してください。</string>
     <string name="game_env_proton_log">1に設定するとProtonの診断ログを生成します。ログ記録はパフォーマンスを低下させ、ストレージを消費する可能性があります。</string>
     <string name="game_env_wined3d">1に設定すると、D3D9～11の互換性テストのためにDXVKの代わりにOpenGLベースのWineD3Dを使用します。</string>
-    <string name="game_env_no_ntsync">1に設定すると、このゲームでntsync（droiddeck-ntsyncまたはカーネルドライバー）を使用しません。パックがある場合はdroiddeck-esync、ない場合はdroiddeck-fsyncを使用します。</string>
-    <string name="game_env_no_esync">1に設定すると、このゲームでdroiddeck-esyncをオフにします。代わりにdroiddeck-fsyncを使用し、fsyncもオフの場合はdroiddeck-ntsyncを使用します。</string>
-    <string name="game_env_no_fsync">1に設定すると、このゲームでdroiddeck-fsyncを使用しません。パックがある場合はdroiddeck-esync、ない場合はdroiddeck-ntsyncを使用します。</string>
-    <string name="game_env_fsync_first">1に設定するとこのゲームをdroiddeck-fsyncで実行します。0に設定すると、Protonに合うパックがある場合はdroiddeck-esyncを優先します。</string>
+    <string name="game_env_no_ntsync">1に設定すると、このゲームでntsync（braindeck-ntsyncまたはカーネルドライバー）を使用しません。パックがある場合はbraindeck-esync、ない場合はbraindeck-fsyncを使用します。</string>
+    <string name="game_env_no_esync">1に設定すると、このゲームでbraindeck-esyncをオフにします。代わりにbraindeck-fsyncを使用し、fsyncもオフの場合はbraindeck-ntsyncを使用します。</string>
+    <string name="game_env_no_fsync">1に設定すると、このゲームでbraindeck-fsyncを使用しません。パックがある場合はbraindeck-esync、ない場合はbraindeck-ntsyncを使用します。</string>
+    <string name="game_env_fsync_first">1に設定するとこのゲームをbraindeck-fsyncで実行します。0に設定すると、Protonに合うパックがある場合はbraindeck-esyncを優先します。</string>
     <string name="game_env_xalia">0に設定すると、このゲームのProtonコントローラーナビゲーション補助を無効にします。</string>
     <string name="game_env_hud">D3D9～11のDXVKオーバーレイ。fpsはフレームレートを表示します。設定を解除するとオーバーレイが非表示になります。</string>
     <string name="game_env_dxvk_config">セミコロンで区切られたDXVK設定。最近のバージョンではdxvk.maxFrameRateでフレームレートを制限します。通常のプレイにはセッションフレームレートリミッターを推奨します。</string>
@@ -132,7 +132,7 @@
     <string name="user_apps_remove_confirm">もう一度タップして削除</string>
     <string name="user_apps_stop_session">削除する前にセッションを終了してください</string>
     <string name="user_apps_script_linked">%1$sが存在するフォルダから実行し、そのフォルダをセッションにリンクします。アプリを削除してもフォルダには影響しません。</string>
-    <string name="user_apps_script_copied">DroidDeck内部にコピーされたフォルダから%1$sを実行します。アプリを削除するとコピーは削除されますが、元のファイルは削除されません。</string>
+    <string name="user_apps_script_copied">BrainDeck内部にコピーされたフォルダから%1$sを実行します。アプリを削除するとコピーは削除されますが、元のファイルは削除されません。</string>
     <string name="user_apps_runtime_required">先にLinux実行環境をインストールしてください</string>
     <string name="user_apps_file_gone">ファイルが存在しません</string>
     <string name="user_apps_no_space">空き容量不足：このフォルダのコピーには%1$sが必要です</string>
@@ -167,7 +167,7 @@
     <string name="app_fex_off">オフ</string>
     <string name="app_fex_hint">FEXはx86 LinuxプログラムをこのARM64デバイスで実行します。自動では、x86向けにビルドされたプログラムでFEXを使用します。</string>
     <string name="app_fex_x86">%1$s（FEX経由）</string>
-    <string name="app_fex_not_ready">このプログラムは%1$s PC向けにビルドされており、FEX経由で実行されますが、FEXはまだセットアップされていません。ログインした状態で一度Steamを開いてください。DroidDeckがFEXと必要なSteam Linux Runtimeをダウンロードした後、このプログラムが開きます。</string>
+    <string name="app_fex_not_ready">このプログラムは%1$s PC向けにビルドされており、FEX経由で実行されますが、FEXはまだセットアップされていません。ログインした状態で一度Steamを開いてください。BrainDeckがFEXと必要なSteam Linux Runtimeをダウンロードした後、このプログラムが開きます。</string>
     <string name="session_end_program">このプログラム</string>
     <string name="session_end_fex_missing">%1$sはx86 PC向けにビルドされており、FEX経由で実行されますが、FEXはまだインストールされていません。ログインした状態で一度Steamを起動し、FEXとSteam Linux Runtimeをダウンロードしてから、もう一度起動してください。</string>
     <string name="add_app_flatpak_hint">FlathubアプリIDまたはそのFlathubページ。Flatpakがまだセットアップされていない場合は、先にセットアップします。</string>
@@ -202,13 +202,13 @@
     <string name="edit_app_save">保存</string>
     <string name="add_app_checking_folder">フォルダを確認中…</string>
     <string name="add_app_folder_linked">フォルダがセッションにリンクされました：%1$s</string>
-    <string name="add_app_folder_copied">このフォルダにはLinuxプログラムが含まれており、共有ストレージでは実行できないため、DroidDeckにコピーされます（%1$s）。</string>
+    <string name="add_app_folder_copied">このフォルダにはLinuxプログラムが含まれており、共有ストレージでは実行できないため、BrainDeckにコピーされます（%1$s）。</string>
     <string name="add_app_confirm">追加</string>
     <string name="add_app_cancel">キャンセル</string>
     <string name="add_app_runtime_required">先に「設定」からLinux実行環境をインストールしてください。</string>
     <string name="add_app_busy">%1$sが完了するまでお待ちください。</string>
     <string name="steam_compat_label">互換</string>
-    <string name="proton_compatible_note">Steamの互換性メニューで「%1$s」と表示されたビルドには、DroidDeckのプレフィックス修正が含まれており、ここでゲームを起動できます。デフォルトはProton Experimental ARM64（%1$s）で、より新しいProton 11.0 ARM64（%1$s）がインストールされている場合はそちらになります。この表示のないValve純正のProtonでは、このデバイスでゲームを起動できません。</string>
+    <string name="proton_compatible_note">Steamの互換性メニューで「%1$s」と表示されたビルドには、BrainDeckのプレフィックス修正が含まれており、ここでゲームを起動できます。デフォルトはProton Experimental ARM64（%1$s）で、より新しいProton 11.0 ARM64（%1$s）がインストールされている場合はそちらになります。この表示のないValve純正のProtonでは、このデバイスでゲームを起動できません。</string>
     <string name="proton_installed_compatible">%1$s インストール済み · %2$s</string>
     <string name="common_cancel">キャンセル</string>
     <string name="common_auto">自動</string>
@@ -280,8 +280,8 @@
     <string name="mode_background_downloads_hint">Steamがダウンロード中は、バックグラウンドでの一時停止を遅らせます。</string>
     <string name="mode_suspend_note">自動ではバックグラウンドで一時停止し、表示すると再開します。手動では「再開」をタップするまで待機します。「しない」では実行し続けます。</string>
     <string name="mode_startup">起動</string>
-    <string name="mode_steam_startup">DroidDeck起動時にSteamを起動</string>
-    <string name="mode_steam_startup_hint">DroidDeckの起動時にSteamセッションを開きます。</string>
+    <string name="mode_steam_startup">BrainDeck起動時にSteamを起動</string>
+    <string name="mode_steam_startup_hint">BrainDeckの起動時にSteamセッションを開きます。</string>
     <string name="mode_decky">Decky</string>
     <string name="mode_decky_checking">リリースを確認中…</string>
     <string name="mode_decky_ready">%1$sをインストールする準備ができました。</string>
@@ -344,7 +344,7 @@
     <string name="wincomp_active">このゲームにインストール済み（%1$d）</string>
     <string name="wincomp_all">すべてのコンポーネント（%1$d）</string>
     <string name="wincomp_installers">Windowsインストーラーが必要（%1$d）</string>
-    <string name="wincomp_installers_note">これらはプレフィックス内で実際のインストーラーを実行します（.NET、PhysX、XNA、Visual C++のフルインストーラーなど）。DroidDeckはまだ対応していませんが、次に対応予定です。</string>
+    <string name="wincomp_installers_note">これらはプレフィックス内で実際のインストーラーを実行します（.NET、PhysX、XNA、Visual C++のフルインストーラーなど）。BrainDeckはまだ対応していませんが、次に対応予定です。</string>
     <string name="wincomp_show">表示</string>
     <string name="wincomp_hide">非表示</string>
     <string name="wincomp_needs_installer">Windowsインストーラーが必要（対応予定）</string>
@@ -372,7 +372,7 @@
     <string name="mode_wifi_open_settings">設定を開く</string>
     <string name="mode_wifi_continue">続行</string>
     <string name="mode_wifi_explain_title">Wi-Fi検出を有効にしますか？</string>
-    <string name="mode_wifi_explain_text">AndroidがWi-Fi名を読み取り、付近のネットワークを検出するには位置情報の権限が必要です。DroidDeckはこの権限を使用してSteamにこれらのネットワークを表示します。位置情報を追跡することはありません。この権限がなくてもインターネットにアクセスできます。</string>
+    <string name="mode_wifi_explain_text">AndroidがWi-Fi名を読み取り、付近のネットワークを検出するには位置情報の権限が必要です。BrainDeckはこの権限を使用してSteamにこれらのネットワークを表示します。位置情報を追跡することはありません。この権限がなくてもインターネットにアクセスできます。</string>
     <string name="mode_storage">ゲームストレージ</string>
     <string name="mode_storage_auto">自動 - SDカードがあればSDカード、およびゲームフォルダ</string>
     <string name="mode_storage_auto_none">自動 - ゲームフォルダ、およびSDカードがあればSDカード（現在なし）</string>
@@ -456,8 +456,8 @@
     <string name="comp_swapped">%1$s · %2$d個を置き換え</string>
     <string name="comp_all_original">%1$s · すべて元のファイル</string>
     <string name="comp_game_running_suffix">%1$s · ゲーム実行中</string>
-    <string name="comp_esync_pack">%1$s · droiddeck-esyncパック</string>
-    <string name="comp_esync_wanted">%1$s · droiddeck-esyncパックはまだありません</string>
+    <string name="comp_esync_pack">%1$s · braindeck-esyncパック</string>
+    <string name="comp_esync_wanted">%1$s · braindeck-esyncパックはまだありません</string>
     <string name="comp_esync_builtin">%1$s · esync内蔵、パック不要</string>
     <string name="comp_gpu_drivers">GPUドライバー</string>
     <string name="comp_reapplied">%1$s · %2$sの起動時に再適用</string>
@@ -521,12 +521,12 @@
     <string name="perf_sysmem">Turnip：sysmemレンダリング</string>
     <string name="perf_sysmem_hint">Steamとほとんどのゲームが高速になります。Adreno 710/720/722では必須です。</string>
     <string name="perf_xalia">Steamのxalia補助をスキップ</string>
-    <string name="perf_fastsync">droiddeck-ntsync（実験的）</string>
-    <string name="perf_fastsync_hint">Linuxのntsyncドライバーをユーザー空間で代替するテスト用機能です。オンの間、Protonはdroiddeck-esyncとdroiddeck-fsyncの代わりにこれを使用します。Proton Experimental ARM64、GE-Proton、proton-cachyosで動作します。次回のセッションで有効になります。</string>
-    <string name="perf_esync">droiddeck-esync</string>
-    <string name="perf_fsync">droiddeck-fsyncを優先</string>
-    <string name="perf_fsync_hint">futex_waitvをユーザー空間で提供し、標準のProtonファイルのままProton自身のfsyncを実行します。パックが不要なため、SteamがProtonを更新してもすぐに動作し続けます。オンの間、Protonがfsyncを使わない一部のゲームを除き、ゲームはdroiddeck-esyncよりこちらを優先します。次回のセッションで有効になります。</string>
-    <string name="perf_esync_hint">ゲームのWindowsスレッドが、wineserverとの往復通信の代わりにeventfdと共有メモリで互いを待機します。そのProtonビルド専用のdroiddeck-esyncパックを使用し、パックは自動的に取得されます。新しいProtonビルド用のパックが用意されるまでは、droiddeck-fsyncが代わりに使用されます。次回のセッションで有効になります。</string>
+    <string name="perf_fastsync">braindeck-ntsync（実験的）</string>
+    <string name="perf_fastsync_hint">Linuxのntsyncドライバーをユーザー空間で代替するテスト用機能です。オンの間、Protonはbraindeck-esyncとbraindeck-fsyncの代わりにこれを使用します。Proton Experimental ARM64、GE-Proton、proton-cachyosで動作します。次回のセッションで有効になります。</string>
+    <string name="perf_esync">braindeck-esync</string>
+    <string name="perf_fsync">braindeck-fsyncを優先</string>
+    <string name="perf_fsync_hint">futex_waitvをユーザー空間で提供し、標準のProtonファイルのままProton自身のfsyncを実行します。パックが不要なため、SteamがProtonを更新してもすぐに動作し続けます。オンの間、Protonがfsyncを使わない一部のゲームを除き、ゲームはbraindeck-esyncよりこちらを優先します。次回のセッションで有効になります。</string>
+    <string name="perf_esync_hint">ゲームのWindowsスレッドが、wineserverとの往復通信の代わりにeventfdと共有メモリで互いを待機します。そのProtonビルド専用のbraindeck-esyncパックを使用し、パックは自動的に取得されます。新しいProtonビルド用のパックが用意されるまでは、braindeck-fsyncが代わりに使用されます。次回のセッションで有効になります。</string>
     <string name="perf_xalia_hint">Protonのコントローラーナビゲーション補助を無効にします。これはすべてのゲームでCPUを消費します。</string>
     <string name="perf_seccomp">seccompなしでprootを実行</string>
     <string name="perf_seccomp_hint">一部のカーネルで「システムコールが見つからない」エラーが解消される場合があります。パフォーマンスが低下する可能性があります。</string>
@@ -696,13 +696,13 @@
     <string name="setup_language_system">システムのデフォルト（%1$s）</string>
     <string name="setup_language_system_short">システムのデフォルト</string>
     <string name="setup_app_scale">アプリの表示サイズ</string>
-    <string name="setup_app_scale_hint">DroidDeckの文字とボタン</string>
+    <string name="setup_app_scale_hint">BrainDeckの文字とボタン</string>
     <string name="setup_app_scale_default">%1$d%%（デフォルト）</string>
     <string name="setup_theme">テーマ</string>
     <string name="setup_theme_hint">ランチャーの外観</string>
     <string name="setup_home">ホーム画面として使用</string>
-    <string name="setup_home_on">DroidDeckをホームアプリとして使用できます</string>
-    <string name="setup_home_off">DroidDeckはホームアプリとして提供されません</string>
+    <string name="setup_home_on">BrainDeckをホームアプリとして使用できます</string>
+    <string name="setup_home_off">BrainDeckはホームアプリとして提供されません</string>
     <string name="setup_orientation">画面の向き</string>
     <string name="setup_orientation_auto">横向き（自動回転）</string>
     <string name="setup_orientation_landscape">横向き</string>
@@ -781,16 +781,16 @@
     <string name="store_website">ウェブサイト</string>
     <string name="store_verified">認証済み</string>
     <string name="upd_title">アップデート</string>
-    <string name="upd_build">DroidDeck %1$s · %2$s</string>
+    <string name="upd_build">BrainDeck %1$s · %2$s</string>
     <string name="upd_checked">確認日時 %1$s</string>
     <string name="upd_not_checked">未確認</string>
-    <string name="upd_perm_title">DroidDeckの自己更新を許可</string>
+    <string name="upd_perm_title">BrainDeckの自己更新を許可</string>
     <string name="upd_perm_text">次のページで「この提供元を許可」をオンにして戻ってください。アップデートが自動的に続行されます。</string>
     <string name="upd_open_settings">設定を開く</string>
     <string name="upd_not_now">後で</string>
     <string name="upd_signed_status">署名が異なります</string>
     <string name="upd_signed_headline">上書き更新できません</string>
-    <string name="upd_signed_detail">このコピーはDroidDeckのリリースキーで署名されていないため、直接上書き更新できません。アンインストールしてから切り替えてください。</string>
+    <string name="upd_signed_detail">このコピーはBrainDeckのリリースキーで署名されていないため、直接上書き更新できません。アンインストールしてから切り替えてください。</string>
     <string name="upd_available">アップデートあり</string>
     <string name="upd_blocked_status">インストールできません</string>
     <string name="upd_switch">切り替え可能</string>
@@ -812,7 +812,7 @@
     <string name="upd_stop_session">実行中のセッションを停止してから更新してください。</string>
     <string name="upd_less">折りたたむ</string>
     <string name="upd_more">もっと見る</string>
-    <string name="upd_new_stable">DroidDeck %1$s</string>
+    <string name="upd_new_stable">BrainDeck %1$s</string>
     <string name="upd_new_preview">新しいプレビュー版ビルド</string>
     <string name="upd_new_test">PR #%1$d テストビルド</string>
     <string name="upd_mb">%1$d MB</string>
@@ -827,7 +827,7 @@
     <string name="upd_tests_hint">正式リリース前に特定の修正を試す</string>
     <string name="upd_tests_none">現在ありません</string>
     <string name="upd_pr">PR #%1$d</string>
-    <string name="upd_not_built">このDroidDeckコピー用にはビルドされていません</string>
+    <string name="upd_not_built">このBrainDeckコピー用にはビルドされていません</string>
     <string name="upd_updated">%1$sを更新しました</string>
     <string name="upd_test_name">PR #%1$d テスト版</string>
     <string name="upd_while_ago">少し前</string>
@@ -847,13 +847,13 @@
     <string name="gate_fix_for_me">自動で修正</string>
     <string name="gate_toggle_steps">「子プロセス制限を無効にする」をオンにして戻ってください。開発者向けオプションをオンのままにしないと、スイッチが再びオフになります。</string>
     <string name="gate_open_dev">開発者向けオプションを開く</string>
-    <string name="gate_no_toggle">このAndroidバージョンにはこのスイッチがないため、DroidDeckはワイヤレスデバッグを介して変更します。約1分かかり、PCは不要です。</string>
+    <string name="gate_no_toggle">このAndroidバージョンにはこのスイッチがないため、BrainDeckはワイヤレスデバッグを介して変更します。約1分かかり、PCは不要です。</string>
     <string name="gate_needs_wifi">ワイヤレスデバッグにはWi-Fiが必要です。ネットワークは何でもよく、インターネットは不要です。</string>
-    <string name="gate_needs_notifications">ペアリングコードは通知に表示されます。DroidDeckに通知を許可するか、「他の方法」を使用してください。</string>
+    <string name="gate_needs_notifications">ペアリングコードは通知に表示されます。BrainDeckに通知を許可するか、「他の方法」を使用してください。</string>
     <string name="gate_allow_notifications">通知を許可</string>
     <string name="gate_step1">設定 → 開発者向けオプション → ワイヤレスデバッグを開き、オンにする</string>
     <string name="gate_step2">「ペアリングコードでデバイスをペア設定」をタップ</string>
-    <string name="gate_step3">DroidDeckの通知にペアリングコードを入力</string>
+    <string name="gate_step3">BrainDeckの通知にペアリングコードを入力</string>
     <string name="gate_waiting">ペアリングのポップアップを待機中…</string>
     <string name="gate_code_needed">ポップアップが見つかりました。表示されたペアリングコードを通知に入力してください。</string>
     <string name="gate_status">ステータス</string>
@@ -969,7 +969,7 @@
     <string name="desktop_removing">デスクトップを削除中</string>
     <string name="desktop_removed">デスクトップを削除しました</string>
     <string name="desktop_cleaning_legacy">古いLXQtファイルを削除中</string>
-    <string name="desktop_removal_unknown">このバージョンのデスクトップを削除する前に、DroidDeckを更新してください。</string>
+    <string name="desktop_removal_unknown">このバージョンのデスクトップを削除する前に、BrainDeckを更新してください。</string>
     <string name="content_linux_desktop">Linuxデスクトップ</string>
     <string name="content_linux_desktop_hint">KDE Plasma、Firefox、エミュレーター</string>
     <string name="games_empty">Steamでインストールされたゲームは、セッション終了後にここに表示されます。</string>
@@ -1011,11 +1011,11 @@
     <string name="gpu_set_with_runtime">ランタイムドライバーと一緒に設定：%1$s は両方を含みます。</string>
     <string name="gpu_runtime_hint">ゲームとデスクトップで使用されます。</string>
     <string name="gpu_runtime_default">ランタイムデフォルト</string>
-    <string name="gpu_display_hint">画面への出力を担当します。DroidDeckの再起動後に有効になります。</string>
+    <string name="gpu_display_hint">画面への出力を担当します。BrainDeckの再起動後に有効になります。</string>
     <string name="gpu_auto_by_gpu">自動 - GPUごとに選択</string>
     <string name="gpu_manage">ダウンロード、インポート、削除…</string>
     <string name="gpu_in_use_caps">使用中</string>
-    <string name="gpu_builtin">DroidDeck内蔵ドライバー</string>
+    <string name="gpu_builtin">BrainDeck内蔵ドライバー</string>
     <string name="gpu_matched_pair">ランタイムドライバーとディスプレイドライバーは一致する組み合わせとして設定されます。</string>
     <string name="gpu_recommended_for">このGPUに推奨：%1$s。</string>
     <string name="gpu_refresh_hint">更新してこのGPUに適したドライバーを検索してください。</string>
@@ -1118,7 +1118,7 @@
     <string name="unfolded_controls_hint">開いた状態では、ゲームがSteam Deckのトラックパッドと背面グリップの上に表示されます。折りたたんだ状態では、ゲームが全画面で表示されます。</string>
     <string name="pip_suspended">一時停止中</string>
     <string name="pip_not_ready">セッションの準備ができたらピクチャーインピクチャーを使用できます。</string>
-    <string name="pip_permission">Android設定でDroidDeckのピクチャーインピクチャーを許可してください。</string>
+    <string name="pip_permission">Android設定でBrainDeckのピクチャーインピクチャーを許可してください。</string>
     <string name="pip_unavailable">Androidがピクチャーインピクチャーを開けませんでした。</string>
     <string name="game_shortcut">ショートカット</string>
     <string name="game_shortcut_add">ホーム画面に追加</string>
@@ -1128,7 +1128,7 @@
     <string name="game_link_copied">起動リンクをコピーしました</string>
     <string name="game_shortcut_unsupported">このランチャーはショートカットを追加できません。「起動リンクをコピー」を使用してください。</string>
     <string name="game_link_invalid">無効なゲーム起動リンクです。</string>
-    <string name="game_link_missing">このゲームはDroidDeckライブラリにありません。</string>
+    <string name="game_link_missing">このゲームはBrainDeckライブラリにありません。</string>
     <string name="game_link_session_busy">Steamゲームを起動する前に現在のセッションを停止してください。</string>
     <string name="game_link_failed">Steamにゲームを送信できませんでした。もう一度起動してみてください。</string>
     <string name="setup_retry_removal">削除を再試行</string>
@@ -1151,7 +1151,7 @@
         <item quantity="other">%2$sから%1$d個のファイルを%3$sにインポートしました</item>
     </plurals>
     <plurals name="main_saves_imported_backup">
-        <item quantity="other">%2$sから%1$d個のファイルを%3$sにインポートしました。以前のセーブデータはDownload/DroidDeck/Saves/backupsにバックアップされました</item>
+        <item quantity="other">%2$sから%1$d個のファイルを%3$sにインポートしました。以前のセーブデータはDownload/BrainDeck/Saves/backupsにバックアップされました</item>
     </plurals>
     <string name="main_saves_pick_zip">%1$sのセーブデータzipを選択</string>
     <string name="main_saves_exporting">%1$sをエクスポート中</string>
@@ -1207,7 +1207,7 @@
 
     <string name="upd_unknown_apps_failed">Androidの「不明なアプリのインストール」設定を開けませんでした</string>
     <string name="upd_couldnt_check">確認できませんでした：%1$s</string>
-    <string name="upd_no_download">このビルドには、このDroidDeckコピー用のダウンロードがありません</string>
+    <string name="upd_no_download">このビルドには、このBrainDeckコピー用のダウンロードがありません</string>
     <string name="upd_stop_first">実行中のセッションを停止してから更新してください</string>
     <string name="upd_stage_downloading">ダウンロード中</string>
     <string name="upd_stage_installing">インストール中</string>
@@ -1236,16 +1236,16 @@
     <string name="drivers_recommended_unpublished">推奨ドライバーは現在公開されていません</string>
     <string name="drivers_downloading_pair">%1$s %2$sをダウンロード中…</string>
     <string name="drivers_updated_to">%1$s %2$sに更新しました。</string>
-    <string name="drivers_updated_to_restart">%1$s %2$sに更新しました。ディスプレイドライバーはDroidDeckの再起動後に有効になります。</string>
+    <string name="drivers_updated_to_restart">%1$s %2$sに更新しました。ディスプレイドライバーはBrainDeckの再起動後に有効になります。</string>
     <string name="drivers_switched_to">%1$s %2$sに切り替えました。</string>
-    <string name="drivers_switched_to_restart">%1$s %2$sに切り替えました。ディスプレイドライバーはDroidDeckの再起動後に有効になります。</string>
+    <string name="drivers_switched_to_restart">%1$s %2$sに切り替えました。ディスプレイドライバーはBrainDeckの再起動後に有効になります。</string>
     <string name="drivers_using">%1$s %2$sを使用中。</string>
-    <string name="drivers_using_restart">%1$s %2$sを使用中。ディスプレイドライバーはDroidDeckの再起動後に有効になります。</string>
+    <string name="drivers_using_restart">%1$s %2$sを使用中。ディスプレイドライバーはBrainDeckの再起動後に有効になります。</string>
     <string name="drivers_not_a_driver">ドライバーzipではありません：AdrenoToolsドライバー、-Linux Turnip、Android + Linuxバンドルのいずれでもありません</string>
     <string name="drivers_import_failed">インポートに失敗しました：%1$s</string>
     <string name="drivers_imported_unnamed">インポートしたドライバー</string>
     <string name="drivers_using_bundle">%1$sをランタイムドライバーとディスプレイドライバーの両方として使用中。</string>
-    <string name="drivers_using_bundle_restart">%1$sをランタイムドライバーとディスプレイドライバーの両方として使用中。ディスプレイドライバーはDroidDeckの再起動後に有効になります。</string>
+    <string name="drivers_using_bundle_restart">%1$sをランタイムドライバーとディスプレイドライバーの両方として使用中。ディスプレイドライバーはBrainDeckの再起動後に有効になります。</string>
     <string name="drivers_deleted_bundle">%1$sを削除しました（両方のドライバー）</string>
     <string name="drivers_deleted">%1$sを削除しました</string>
     <string name="drivers_release_status">最新：%1$s · 確認 %2$s</string>
@@ -1259,7 +1259,7 @@
     <plurals name="drivers_ago_days">
         <item quantity="other">%1$d日前</item>
     </plurals>
-    <string name="drivers_checking_sources">Banners-Turnip、WinNative、DroidDeckを確認中…</string>
+    <string name="drivers_checking_sources">Banners-Turnip、WinNative、BrainDeckを確認中…</string>
     <string name="drivers_check_failed">確認に失敗</string>
     <string name="drivers_installed_pick_either">%1$sをインストールしました - どちらかの一覧で選択すると両方のドライバーが設定されます</string>
     <string name="drivers_installed_pick">%1$sをインストールしました - メニューで選択してください</string>
@@ -1626,7 +1626,7 @@
     <string name="adbfix_no_pairing">ワイヤレスデバッグのペアリング情報が保存されていません</string>
     <string name="adbfix_enter_address">現在のワイヤレスデバッグのIPアドレスとポートを入力してください</string>
 
-    <string name="adbpair_timed_out">ペアリングのポップアップを待機中にタイムアウトしました。DroidDeckからもう一度お試しください。</string>
+    <string name="adbpair_timed_out">ペアリングのポップアップを待機中にタイムアウトしました。BrainDeckからもう一度お試しください。</string>
     <string name="adbpair_discovery_failed_code">ペアリングのポップアップを検索できませんでした（%1$d）。Wi-Fiがオンになっているか確認してください。</string>
     <string name="adbpair_discovery_failed">ペアリングのポップアップを検索できませんでした：%1$s</string>
     <string name="adbpair_six_digits">6桁のコードをすべて入力してください</string>
@@ -1648,20 +1648,20 @@
     <string name="adbpair_enter_code">コードを入力</string>
     <string name="adbpair_title_working">Steamをセットアップ中</string>
     <string name="adbpair_title_done">Steamの準備ができました</string>
-    <string name="adbpair_done_text">タップしてDroidDeckに戻ります。ワイヤレスデバッグはオフにしてかまいません。</string>
+    <string name="adbpair_done_text">タップしてBrainDeckに戻ります。ワイヤレスデバッグはオフにしてかまいません。</string>
     <string name="adbpair_title_failed">ワイヤレスデバッグのセットアップが中断しました</string>
 
     <string name="selfinst_http">ダウンロード先がHTTP %1$dを返しました</string>
     <string name="selfinst_size_mismatch">ダウンロードしたファイルのサイズが公開されているAPKと一致しないため、破棄しました。もう一度お試しください</string>
     <string name="selfinst_checksum_mismatch">ダウンロードしたファイルがチェックサムと一致しないため、破棄しました。もう一度お試しください</string>
     <string name="selfinst_wrong_package">このアップデートはAndroidパッケージ%1$s用で、%2$s用ではありません</string>
-    <string name="selfinst_metadata_signer">アップデート情報にDroidDeckのリリース署名キーが記載されていません</string>
+    <string name="selfinst_metadata_signer">アップデート情報にBrainDeckのリリース署名キーが記載されていません</string>
     <string name="selfinst_unreadable">AndroidがダウンロードしたAPKを読み取れませんでした</string>
     <string name="selfinst_apk_wrong_package">ダウンロードしたAPKは%1$s用で、%2$s用ではありません</string>
     <string name="selfinst_version_mismatch">ダウンロードしたAPKのversionCodeは%1$dで、公開されている%2$dと一致しません</string>
     <string name="selfinst_downgrade">AndroidはインストールされているversionCode %2$dの上に%1$dをインストールしません</string>
     <string name="selfinst_no_signing">ダウンロードしたAPKに署名情報がありません</string>
-    <string name="selfinst_wrong_signer">ダウンロードしたAPKはDroidDeckのリリースキーで署名されていません</string>
+    <string name="selfinst_wrong_signer">ダウンロードしたAPKはBrainDeckのリリースキーで署名されていません</string>
     <string name="appupd_http">アップデートカタログがHTTP %1$dを返しました</string>
 
     <string name="loadstate_starting">セッションを開始中…</string>
@@ -1687,7 +1687,7 @@
     <string name="pextra_installing">%1$sをインストール中</string>
     <string name="pextra_install_failed">%1$sのインストールに失敗しました（終了コード %2$d）</string>
     <string name="pextra_could_not_install">%1$sをインストールできませんでした</string>
-    <string name="esync_fetching">droiddeck-esyncパックを取得中</string>
+    <string name="esync_fetching">braindeck-esyncパックを取得中</string>
 
     <string name="cmgr_fex_linux_helpers">Linux補助プログラム付き</string>
     <string name="cmgr_fex_dlls_only">DLLのみ</string>
@@ -1745,7 +1745,7 @@
     <string name="gpuinfo_supported">サポート対象</string>
     <string name="gpuinfo_experimental">実験的：ドライバーはテストビルドです</string>
     <string name="gpuinfo_below_tested">テスト済みハードウェア（Adreno 725以降）未満：動作しない可能性があります</string>
-    <string name="gpuinfo_unsupported">サポート対象外：DroidDeckにはAdreno（Snapdragon）GPUが必要です</string>
+    <string name="gpuinfo_unsupported">サポート対象外：BrainDeckにはAdreno（Snapdragon）GPUが必要です</string>
 
     <string name="turnip_rate_limited">GitHubのレート制限に達しました。後でもう一度お試しください</string>
     <string name="turnip_github_http">GitHubがHTTP %1$dを返しました</string>
@@ -1788,10 +1788,10 @@
     <string name="phantom_instructions_not_applicable">このAndroidバージョンではこの制限は使用されません。</string>
     <string name="phantom_fix_toggle">開発者向けオプションで「子プロセス制限を無効にする」をオンにし、その後も開発者向けオプションをオンのままにしてください。</string>
     <string name="phantom_fix_no_toggle">このAndroidバージョンにはこのスイッチがありません。ワイヤレスデバッグを使って、このデバイスから変更してください。</string>
-    <string name="upd_block_no_apk">このビルドには、このDroidDeckコピー用のダウンロードがありません。</string>
+    <string name="upd_block_no_apk">このビルドには、このBrainDeckコピー用のダウンロードがありません。</string>
     <string name="upd_block_version_code">このビルドのversionCode %1$dはインストール済みの%2$dより小さいため、Androidは上書きインストールしません。</string>
     <string name="upd_fail_downgrade">Androidは新しいバージョンの上に古いバージョンをインストールしません。チャンネルが追いつくまで、このビルドを使い続けてください。</string>
-    <string name="upd_fail_signature">このDroidDeckコピーは署名が異なる（ローカルビルド？）ため、Androidは上書き更新しません。</string>
+    <string name="upd_fail_signature">このBrainDeckコピーは署名が異なる（ローカルビルド？）ため、Androidは上書き更新しません。</string>
     <string name="upd_fail_storage">アップデートに必要な空き容量が不足しています。</string>
     <string name="upd_fail_aborted">アップデートはキャンセルされました。</string>
     <string name="upd_fail_with_message">アップデートをインストールできませんでした：%1$s</string>
@@ -1816,7 +1816,7 @@
     <string name="gstore_volume_free">%1$s · 空き %2$s</string>
     <string name="mode_storage_auto_short">自動</string>
     <string name="appupd_catalog_rejected">アップデートカタログの検証に失敗しました（%1$s）</string>
-    <string name="main_adb_clip_label">DroidDeckの子プロセス設定</string>
+    <string name="main_adb_clip_label">BrainDeckの子プロセス設定</string>
     <string name="setup_signed_in_offline_unnamed">ログイン中 · オフラインモード</string>
     <string name="setup_signed_in_unnamed">ログイン中</string>
     <string name="driver_tag_bundled">同梱</string>
@@ -2130,7 +2130,7 @@
     <string name="touch_speed_normal">普通</string>
     <string name="touch_speed_fast">速い</string>
     <string name="touch_edit_layout">レイアウトを編集</string>
-    <string name="touch_droiddeck_menu">DroidDeckメニュー</string>
+    <string name="touch_braindeck_menu">BrainDeckメニュー</string>
     <string name="touch_drag_hint">操作ボタンを画面にドラッグしてください</string>
     <string name="touch_arrange">配置</string>
     <string name="touch_discard">破棄</string>

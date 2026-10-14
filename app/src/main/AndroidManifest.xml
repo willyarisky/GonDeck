@@ -22,7 +22,7 @@
     <uses-feature android:name="android.hardware.vulkan.version" android:version="0x401000" android:required="true" />
     <uses-feature android:name="android.hardware.gamepad" android:required="false" />
 
-    <application
+        <application
         android:name=".App"
         android:localeConfig="@xml/locales_config"
         android:allowBackup="false"
@@ -32,8 +32,8 @@
         android:hardwareAccelerated="true"
         android:largeHeap="true"
         android:extractNativeLibs="true"
-        android:appCategory="game"
-        android:isGame="true">
+        android:appCategory="productivity"
+        android:isGame="false">
 
         <meta-data android:name="android.game_mode_config" android:resource="@xml/game_mode_config" />
 
@@ -50,14 +50,10 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="droiddeck" android:host="game" />
+                <data android:scheme="braindeck" android:host="app" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.droiddeck.launcher.LAUNCH_GAME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

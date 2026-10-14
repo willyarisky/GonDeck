@@ -12,22 +12,9 @@ export DROIDDECK_NESTED_SCALE=1
 chmod 700 "$XDG_RUNTIME_DIR" 2>/dev/null
 mkdir -p /tmp/.X11-unix /tmp/.ICE-unix && chmod 1777 /tmp/.X11-unix /tmp/.ICE-unix 2>/dev/null
 export BL_DESKTOP=1
-ln -sf /usr/local/bin/droiddeck-steam-launch /usr/local/bin/steamdeck-steam 2>/dev/null
-ln -sf /usr/local/bin/droiddeck-steam-shim /usr/local/bin/steam 2>/dev/null
 
-# Autostart Steam immediately when desktop starts!
-autostart_dir="$HOME/.config/autostart"
-mkdir -p "$autostart_dir"
-cat << 'STEAMAUTO' > "$autostart_dir/steam.desktop"
-[Desktop Entry]
-Type=Application
-Name=Steam
-Exec=/usr/local/bin/droiddeck-steam-launch desktop
-Icon=steam
-Terminal=false
-Categories=Game;
-STEAMAUTO
-chmod +x "$autostart_dir/steam.desktop" 2>/dev/null
+# Clean up any leftover Steam autostart
+rm -f "$HOME/.config/autostart/steam.desktop" 2>/dev/null
 
-echo "== droiddeck-desktop: Starting Plasma with Steam autostart"
+echo "== braindeck-desktop: Starting Plasma Mini Laptop Desktop environment"
 exec dbus-run-session -- startplasma-wayland
