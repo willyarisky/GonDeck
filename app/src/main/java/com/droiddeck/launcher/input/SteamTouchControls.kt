@@ -1018,7 +1018,7 @@ class SteamTouchControls(
         }
         drawVolume(canvas, f, s)
         blueButton(canvas, ref(f, s, 45f, 329f, 249f, 372f), context.getString(R.string.touch_edit_layout), s, primary = true) { menuOpen = false; startEditing() }
-        blueButton(canvas, ref(f, s, 271f, 329f, 475f, 372f), context.getString(R.string.touch_droiddeck_menu), s) { menuOpen = false; onMenu() }
+        blueButton(canvas, ref(f, s, 271f, 329f, 475f, 372f), context.getString(R.string.touch_gondeck_menu), s) { menuOpen = false; onMenu() }
     }
 
     private val audio by lazy { context.getSystemService(Context.AUDIO_SERVICE) as android.media.AudioManager }

@@ -360,7 +360,7 @@ fun FrontEndScreen(s: FrontEndState, a: FrontEndActions, page: (@Composable () -
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 private fun FrontEndScreenBody(s: FrontEndState, a: FrontEndActions, page: (@Composable () -> Unit)?, frontFocus: FrontFocus) {
-    var selected by rememberSaveable { mutableStateOf("desktop") }
+    var selected by rememberSaveable { mutableStateOf("steam") }
     LaunchedEffect(s.shortcutPicker) { if (s.shortcutPicker) selected = "desktop" }
     LaunchedEffect(s.navigate) {
         val target = s.navigate ?: return@LaunchedEffect

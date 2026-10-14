@@ -850,7 +850,7 @@ object EsyncPacks {
                 connectTimeout = TIMEOUT_MS
                 readTimeout = TIMEOUT_MS
                 instanceFollowRedirects = true
-                setRequestProperty("User-Agent", "DroidDeck-Android")
+                setRequestProperty("User-Agent", "GonDeck-Android")
             }
             val code = connection.responseCode
             if (code / 100 != 2) {

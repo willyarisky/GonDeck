@@ -322,7 +322,7 @@ object AppUpdates {
             throw IOException("The update catalog has an invalid checksum")
         }
         if (!signer.equals(BuildConfig.RELEASE_SIGNER, ignoreCase = true)) {
-            throw IOException("The update catalog is not signed for DroidDeck's release key")
+            throw IOException("The update catalog is not signed for GonDeck's release key")
         }
         val allowed = listOf(
             "https://github.com/$REPO/releases/download/",
@@ -357,7 +357,7 @@ object AppUpdates {
         c.connectTimeout = 15_000
         c.readTimeout = 20_000
         c.setRequestProperty("Accept", "application/json")
-        c.setRequestProperty("User-Agent", "DroidDeck-app")
+        c.setRequestProperty("User-Agent", "GonDeck-app")
         c.setRequestProperty("Cache-Control", "no-cache")
         try {
             val code = c.responseCode

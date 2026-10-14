@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BrainDeck</string>
+    <string name="app_name">GonDeck</string>
     <string-array name="loading_hints">
         <item>La primera vez se descarga Steam. Puede tardar unos minutos.</item>
         <item>De forma predeterminada, al salir de la app Steam se pausa y continúa donde lo dejaste cuando vuelves.</item>
@@ -74,10 +74,10 @@
     <string name="game_env_vkd3d_config">Opciones de VKD3D para D3D12. nodxr desactiva el trazado de rayos; úsalo solo en un juego que lo necesite.</string>
     <string name="game_env_proton_log">Pon 1 para obtener un registro de diagnóstico de Proton. El registro puede reducir el rendimiento y usar almacenamiento.</string>
     <string name="game_env_wined3d">Pon 1 para usar WineD3D basado en OpenGL en lugar de DXVK, para pruebas de compatibilidad con D3D9–11.</string>
-    <string name="game_env_no_ntsync">Pon 1 para que este juego no use ntsync (braindeck-ntsync o un controlador del kernel); usa braindeck-esync si hay un paquete y, si no, braindeck-fsync.</string>
-    <string name="game_env_no_esync">Pon 1 para desactivar braindeck-esync en este juego; usa braindeck-fsync en su lugar, o braindeck-ntsync si fsync también está desactivado.</string>
-    <string name="game_env_no_fsync">Pon 1 para que este juego no use braindeck-fsync; usa braindeck-esync si hay un paquete y, si no, braindeck-ntsync.</string>
-    <string name="game_env_fsync_first">Pon 1 para que este juego use braindeck-fsync, o 0 para dar prioridad a braindeck-esync cuando haya un paquete para su Proton.</string>
+    <string name="game_env_no_ntsync">Pon 1 para que este juego no use ntsync (gondeck-ntsync o un controlador del kernel); usa gondeck-esync si hay un paquete y, si no, gondeck-fsync.</string>
+    <string name="game_env_no_esync">Pon 1 para desactivar gondeck-esync en este juego; usa gondeck-fsync en su lugar, o gondeck-ntsync si fsync también está desactivado.</string>
+    <string name="game_env_no_fsync">Pon 1 para que este juego no use gondeck-fsync; usa gondeck-esync si hay un paquete y, si no, gondeck-ntsync.</string>
+    <string name="game_env_fsync_first">Pon 1 para que este juego use gondeck-fsync, o 0 para dar prioridad a gondeck-esync cuando haya un paquete para su Proton.</string>
     <string name="game_env_xalia">Pon 0 para desactivar el asistente de navegación con mando de Proton en este juego.</string>
     <string name="game_env_hud">Superposición de DXVK para D3D9–11. fps muestra la tasa de fotogramas; sin definir la oculta.</string>
     <string name="game_env_dxvk_config">Ajustes de DXVK separados por punto y coma. Las versiones recientes usan dxvk.maxFrameRate para limitar fotogramas; para el uso normal prefiere el límite de fotogramas de la sesión.</string>
@@ -132,7 +132,7 @@
     <string name="user_apps_remove_confirm">Pulsa de nuevo para quitar</string>
     <string name="user_apps_stop_session">Detén la sesión para quitar</string>
     <string name="user_apps_script_linked">Ejecuta %1$s desde su carpeta, enlazada a la sesión donde está. Quitar la app no toca esa carpeta.</string>
-    <string name="user_apps_script_copied">Ejecuta %1$s desde una copia de su carpeta dentro de BrainDeck. Quitar la app borra la copia, no el original.</string>
+    <string name="user_apps_script_copied">Ejecuta %1$s desde una copia de su carpeta dentro de GonDeck. Quitar la app borra la copia, no el original.</string>
     <string name="user_apps_runtime_required">Instala primero el runtime de Linux</string>
     <string name="user_apps_file_gone">El archivo ya no está</string>
     <string name="user_apps_no_space">No hay espacio libre suficiente: copiar la carpeta necesita %1$s</string>
@@ -167,7 +167,7 @@
     <string name="app_fex_off">No</string>
     <string name="app_fex_hint">FEX ejecuta programas Linux x86 en este dispositivo ARM64. Auto lo usa cuando el programa es para x86.</string>
     <string name="app_fex_x86">%1$s con FEX</string>
-    <string name="app_fex_not_ready">Este programa está hecho para PC %1$s y se ejecuta con FEX, que aún no está listo. Abre Steam una vez con tu sesión iniciada: BrainDeck hará que descargue FEX y el Steam Linux Runtime que necesita, y después se abrirá.</string>
+    <string name="app_fex_not_ready">Este programa está hecho para PC %1$s y se ejecuta con FEX, que aún no está listo. Abre Steam una vez con tu sesión iniciada: GonDeck hará que descargue FEX y el Steam Linux Runtime que necesita, y después se abrirá.</string>
     <string name="session_end_program">Este programa</string>
     <string name="session_end_fex_missing">%1$s está hecho para PC x86 y se ejecuta con FEX, que aún no está instalado. Abre Steam una vez con tu sesión iniciada y deja que descargue FEX y el Steam Linux Runtime; después vuelve a iniciarlo.</string>
     <string name="add_app_flatpak_hint">Un ID de app de Flathub o su página en Flathub. Flatpak se configura primero si aún no lo está.</string>
@@ -202,13 +202,13 @@
     <string name="edit_app_save">Guardar</string>
     <string name="add_app_checking_folder">Comprobando la carpeta…</string>
     <string name="add_app_folder_linked">Su carpeta está enlazada a la sesión: %1$s</string>
-    <string name="add_app_folder_copied">Su carpeta contiene programas de Linux, que el almacenamiento compartido no puede ejecutar, así que se copia en BrainDeck (%1$s).</string>
+    <string name="add_app_folder_copied">Su carpeta contiene programas de Linux, que el almacenamiento compartido no puede ejecutar, así que se copia en GonDeck (%1$s).</string>
     <string name="add_app_confirm">Añadir</string>
     <string name="add_app_cancel">Cancelar</string>
     <string name="add_app_runtime_required">Instala primero el runtime de Linux desde Configuración.</string>
     <string name="add_app_busy">Espera a que termine %1$s.</string>
     <string name="steam_compat_label">Compatible</string>
-    <string name="proton_compatible_note">Las versiones marcadas como “%1$s” en el menú Compatibilidad de Steam tienen las correcciones de prefijo de BrainDeck e inician juegos aquí. La predeterminada es Proton Experimental ARM64 (%1$s), o Proton 11.0 ARM64 (%1$s) cuando esa versión más reciente esté instalada. Las entradas de Proton propias de Valve sin la marca no pueden iniciar juegos en este dispositivo.</string>
+    <string name="proton_compatible_note">Las versiones marcadas como “%1$s” en el menú Compatibilidad de Steam tienen las correcciones de prefijo de GonDeck e inician juegos aquí. La predeterminada es Proton Experimental ARM64 (%1$s), o Proton 11.0 ARM64 (%1$s) cuando esa versión más reciente esté instalada. Las entradas de Proton propias de Valve sin la marca no pueden iniciar juegos en este dispositivo.</string>
     <string name="proton_installed_compatible">Instalada %1$s · %2$s</string>
     <string name="common_cancel">Cancelar</string>
     <string name="common_auto">Auto</string>
@@ -280,8 +280,8 @@
     <string name="mode_background_downloads_hint">Retrasa la suspensión en segundo plano mientras Steam esté descargando.</string>
     <string name="mode_suspend_note">Auto pausa en segundo plano y reanuda al mostrarse. Manual espera a Reanudar. Nunca sigue ejecutándose.</string>
     <string name="mode_startup">Inicio</string>
-    <string name="mode_steam_startup">Iniciar Steam con BrainDeck</string>
-    <string name="mode_steam_startup_hint">Abre la sesión de Steam al iniciar BrainDeck.</string>
+    <string name="mode_steam_startup">Iniciar Steam con GonDeck</string>
+    <string name="mode_steam_startup_hint">Abre la sesión de Steam al iniciar GonDeck.</string>
     <string name="mode_decky">Decky</string>
     <string name="mode_decky_checking">Buscando versiones…</string>
     <string name="mode_decky_ready">Listo para instalar %1$s.</string>
@@ -346,7 +346,7 @@
     <string name="wincomp_active">Instalados para este juego (%1$d)</string>
     <string name="wincomp_all">Todos los componentes (%1$d)</string>
     <string name="wincomp_installers">Necesitan un instalador de Windows (%1$d)</string>
-    <string name="wincomp_installers_note">Estos ejecutan un instalador real dentro del prefijo (.NET, PhysX, XNA, los instaladores completos de Visual C++…). BrainDeck aún no puede hacerlo; es lo siguiente.</string>
+    <string name="wincomp_installers_note">Estos ejecutan un instalador real dentro del prefijo (.NET, PhysX, XNA, los instaladores completos de Visual C++…). GonDeck aún no puede hacerlo; es lo siguiente.</string>
     <string name="wincomp_show">Mostrar</string>
     <string name="wincomp_hide">Ocultar</string>
     <string name="wincomp_needs_installer">Necesita un instalador de Windows (próximamente)</string>
@@ -374,7 +374,7 @@
     <string name="mode_wifi_open_settings">Abrir ajustes</string>
     <string name="mode_wifi_continue">Continuar</string>
     <string name="mode_wifi_explain_title">¿Activar la detección de redes Wi-Fi?</string>
-    <string name="mode_wifi_explain_text">Android exige el permiso de ubicación para leer los nombres de Wi-Fi y detectar redes cercanas. BrainDeck usa este acceso para mostrar esas redes en Steam. No rastreamos tu ubicación. El acceso a internet funciona sin este permiso.</string>
+    <string name="mode_wifi_explain_text">Android exige el permiso de ubicación para leer los nombres de Wi-Fi y detectar redes cercanas. GonDeck usa este acceso para mostrar esas redes en Steam. No rastreamos tu ubicación. El acceso a internet funciona sin este permiso.</string>
     <string name="mode_storage">Almacenamiento de juegos</string>
     <string name="mode_storage_auto">Automático - la tarjeta SD si está presente, y tus carpetas de juegos</string>
     <string name="mode_storage_auto_none">Automático - tus carpetas de juegos, y la tarjeta SD si está presente (ninguna ahora)</string>
@@ -460,8 +460,8 @@
     <string name="comp_swapped">%1$s · %2$d reemplazados</string>
     <string name="comp_all_original">%1$s · todos originales</string>
     <string name="comp_game_running_suffix">%1$s · juego en ejecución</string>
-    <string name="comp_esync_pack">%1$s · paquete braindeck-esync</string>
-    <string name="comp_esync_wanted">%1$s · aún sin paquete braindeck-esync</string>
+    <string name="comp_esync_pack">%1$s · paquete gondeck-esync</string>
+    <string name="comp_esync_wanted">%1$s · aún sin paquete gondeck-esync</string>
     <string name="comp_esync_builtin">%1$s · esync integrado, no necesita paquete</string>
     <string name="comp_gpu_drivers">Controladores de GPU</string>
     <string name="comp_reapplied">%1$s · reaplicado al iniciar %2$s</string>
@@ -525,12 +525,12 @@
     <string name="perf_sysmem">Turnip: renderizado sysmem</string>
     <string name="perf_sysmem_hint">Más rápido para Steam y la mayoría de juegos. Obligatorio en Adreno 710/720/722.</string>
     <string name="perf_xalia">Omitir el asistente xalia de Steam</string>
-    <string name="perf_fastsync">braindeck-ntsync (experimental)</string>
-    <string name="perf_fastsync_hint">Un sustituto en espacio de usuario del controlador ntsync de Linux, para pruebas. Mientras está activado, Proton lo usa en lugar de braindeck-esync y braindeck-fsync. Funciona con Proton Experimental ARM64, GE-Proton y proton-cachyos. Se aplica en la próxima sesión.</string>
-    <string name="perf_esync">braindeck-esync</string>
-    <string name="perf_fsync">braindeck-fsync primero</string>
-    <string name="perf_fsync_hint">Usa el fsync propio de Proton con los archivos originales de Proton, con futex_waitv proporcionado en espacio de usuario, así que no necesita paquete y sigue funcionando en cuanto Steam actualiza Proton. Mientras está activado, los juegos lo usan antes que braindeck-esync, salvo los pocos que Proton mantiene sin fsync. Se aplica en la próxima sesión.</string>
-    <string name="perf_esync_hint">Los hilos de Windows de los juegos se esperan entre sí mediante eventfd y memoria compartida, sin pasar por wineserver. Usa un paquete braindeck-esync hecho para esa versión exacta de Proton; los paquetes se descargan automáticamente. Mientras no exista uno para una versión nueva de Proton, braindeck-fsync lo sustituye. Se aplica en la próxima sesión.</string>
+    <string name="perf_fastsync">gondeck-ntsync (experimental)</string>
+    <string name="perf_fastsync_hint">Un sustituto en espacio de usuario del controlador ntsync de Linux, para pruebas. Mientras está activado, Proton lo usa en lugar de gondeck-esync y gondeck-fsync. Funciona con Proton Experimental ARM64, GE-Proton y proton-cachyos. Se aplica en la próxima sesión.</string>
+    <string name="perf_esync">gondeck-esync</string>
+    <string name="perf_fsync">gondeck-fsync primero</string>
+    <string name="perf_fsync_hint">Usa el fsync propio de Proton con los archivos originales de Proton, con futex_waitv proporcionado en espacio de usuario, así que no necesita paquete y sigue funcionando en cuanto Steam actualiza Proton. Mientras está activado, los juegos lo usan antes que gondeck-esync, salvo los pocos que Proton mantiene sin fsync. Se aplica en la próxima sesión.</string>
+    <string name="perf_esync_hint">Los hilos de Windows de los juegos se esperan entre sí mediante eventfd y memoria compartida, sin pasar por wineserver. Usa un paquete gondeck-esync hecho para esa versión exacta de Proton; los paquetes se descargan automáticamente. Mientras no exista uno para una versión nueva de Proton, gondeck-fsync lo sustituye. Se aplica en la próxima sesión.</string>
     <string name="perf_xalia_hint">Desactiva el asistente de navegación con mando de Proton, que consume CPU en cada juego.</string>
     <string name="perf_seccomp">Ejecutar proot sin seccomp</string>
     <string name="perf_seccomp_hint">Puede corregir errores de syscalls ausentes en algunos kernels. Puede reducir el rendimiento.</string>
@@ -702,13 +702,13 @@
     <string name="setup_language_system">Predeterminado del sistema (%1$s)</string>
     <string name="setup_language_system_short">Predeterminado del sistema</string>
     <string name="setup_app_scale">Escala de la app</string>
-    <string name="setup_app_scale_hint">Texto y controles de BrainDeck</string>
+    <string name="setup_app_scale_hint">Texto y controles de GonDeck</string>
     <string name="setup_app_scale_default">%1$d%% (predeterminada)</string>
     <string name="setup_theme">Tema</string>
     <string name="setup_theme_hint">Apariencia del launcher</string>
     <string name="setup_home">Usar como pantalla de inicio</string>
-    <string name="setup_home_on">BrainDeck puede ser la app de inicio</string>
-    <string name="setup_home_off">BrainDeck nunca se ofrece como app de inicio</string>
+    <string name="setup_home_on">GonDeck puede ser la app de inicio</string>
+    <string name="setup_home_off">GonDeck nunca se ofrece como app de inicio</string>
     <string name="setup_orientation">Orientación</string>
     <string name="setup_orientation_auto">Horizontal automática</string>
     <string name="setup_orientation_landscape">Horizontal</string>
@@ -787,16 +787,16 @@
     <string name="store_website">Sitio web</string>
     <string name="store_verified">Verificada</string>
     <string name="upd_title">Actualizaciones</string>
-    <string name="upd_build">BrainDeck %1$s · %2$s</string>
+    <string name="upd_build">GonDeck %1$s · %2$s</string>
     <string name="upd_checked">Comprobado %1$s</string>
     <string name="upd_not_checked">Aún sin comprobar</string>
-    <string name="upd_perm_title">Permitir que BrainDeck se actualice solo</string>
+    <string name="upd_perm_title">Permitir que GonDeck se actualice solo</string>
     <string name="upd_perm_text">En la siguiente pantalla, activa Permitir desde esta fuente y vuelve. La actualización continúa sola.</string>
     <string name="upd_open_settings">Abrir ajustes</string>
     <string name="upd_not_now">Ahora no</string>
     <string name="upd_signed_status">Firmada de otro modo</string>
     <string name="upd_signed_headline">No se puede actualizar sobre la instalada</string>
-    <string name="upd_signed_detail">Esta copia no está firmada con la clave de publicación de BrainDeck, así que las actualizaciones no se pueden instalar sobre ella. Desinstálala para cambiar.</string>
+    <string name="upd_signed_detail">Esta copia no está firmada con la clave de publicación de GonDeck, así que las actualizaciones no se pueden instalar sobre ella. Desinstálala para cambiar.</string>
     <string name="upd_available">Actualización disponible</string>
     <string name="upd_blocked_status">No se puede instalar</string>
     <string name="upd_switch">Lista para cambiar</string>
@@ -818,7 +818,7 @@
     <string name="upd_stop_session">Detén la sesión en ejecución para actualizar.</string>
     <string name="upd_less">Menos</string>
     <string name="upd_more">Más</string>
-    <string name="upd_new_stable">BrainDeck %1$s</string>
+    <string name="upd_new_stable">GonDeck %1$s</string>
     <string name="upd_new_preview">Nueva versión de Vista previa</string>
     <string name="upd_new_test">Versión de prueba del PR #%1$d</string>
     <string name="upd_mb">%1$d MB</string>
@@ -833,7 +833,7 @@
     <string name="upd_tests_hint">Prueba una corrección antes de su publicación</string>
     <string name="upd_tests_none">Ninguna por ahora</string>
     <string name="upd_pr">PR #%1$d</string>
-    <string name="upd_not_built">No compilada para esta copia de BrainDeck</string>
+    <string name="upd_not_built">No compilada para esta copia de GonDeck</string>
     <string name="upd_updated">Actualizada %1$s</string>
     <string name="upd_test_name">la prueba del PR #%1$d</string>
     <string name="upd_while_ago">hace un tiempo</string>
@@ -859,13 +859,13 @@
     <string name="gate_fix_for_me">Solucionarlo por mí</string>
     <string name="gate_toggle_steps">Activa “Desactivar restricciones de procesos secundarios” y vuelve. Deja activadas las Opciones de desarrollador o el interruptor se desactivará de nuevo.</string>
     <string name="gate_open_dev">Abrir Opciones de desarrollador</string>
-    <string name="gate_no_toggle">Esta versión de Android no tiene un interruptor para ello, así que BrainDeck lo cambia mediante la Depuración inalámbrica. Tarda un minuto y no necesitas ordenador.</string>
+    <string name="gate_no_toggle">Esta versión de Android no tiene un interruptor para ello, así que GonDeck lo cambia mediante la Depuración inalámbrica. Tarda un minuto y no necesitas ordenador.</string>
     <string name="gate_needs_wifi">La Depuración inalámbrica necesita Wi-Fi. Sirve cualquier red; no necesita internet.</string>
-    <string name="gate_needs_notifications">El código de vinculación aparece en una notificación. Permite las notificaciones de BrainDeck o usa Otras formas.</string>
+    <string name="gate_needs_notifications">El código de vinculación aparece en una notificación. Permite las notificaciones de GonDeck o usa Otras formas.</string>
     <string name="gate_allow_notifications">Permitir notificaciones</string>
     <string name="gate_step1">Abre Ajustes → Opciones de desarrollador → Depuración inalámbrica y actívala</string>
     <string name="gate_step2">Toca “Vincular dispositivo con código de vinculación”</string>
-    <string name="gate_step3">Escribe el código en la notificación de BrainDeck</string>
+    <string name="gate_step3">Escribe el código en la notificación de GonDeck</string>
     <string name="gate_waiting">Esperando la ventana de vinculación…</string>
     <string name="gate_code_needed">Ventana encontrada. Introduce su código en la notificación.</string>
     <string name="gate_status">Estado</string>
@@ -981,7 +981,7 @@
     <string name="desktop_removing">Eliminando el escritorio</string>
     <string name="desktop_removed">Escritorio eliminado</string>
     <string name="desktop_cleaning_legacy">Eliminando archivos antiguos de LXQt</string>
-    <string name="desktop_removal_unknown">Actualiza BrainDeck antes de eliminar esta versión del escritorio.</string>
+    <string name="desktop_removal_unknown">Actualiza GonDeck antes de eliminar esta versión del escritorio.</string>
     <string name="content_linux_desktop">Escritorio de Linux</string>
     <string name="content_linux_desktop_hint">KDE Plasma, Firefox y tus emuladores</string>
     <string name="games_empty">Los juegos que instales en Steam aparecen aquí después de la sesión.</string>
@@ -1023,11 +1023,11 @@
     <string name="gpu_set_with_runtime">Se define junto con el controlador de runtime: %1$s incluye ambos.</string>
     <string name="gpu_runtime_hint">Lo usan los juegos y el escritorio.</string>
     <string name="gpu_runtime_default">Predeterminado del runtime</string>
-    <string name="gpu_display_hint">Dibuja los fotogramas en pantalla. Se aplica al reiniciar BrainDeck.</string>
+    <string name="gpu_display_hint">Dibuja los fotogramas en pantalla. Se aplica al reiniciar GonDeck.</string>
     <string name="gpu_auto_by_gpu">Auto - elegido según la GPU</string>
     <string name="gpu_manage">Descargar, importar o eliminar…</string>
     <string name="gpu_in_use_caps">EN USO</string>
-    <string name="gpu_builtin">Los controladores integrados en BrainDeck</string>
+    <string name="gpu_builtin">Los controladores integrados en GonDeck</string>
     <string name="gpu_matched_pair">Controladores de runtime y de pantalla definidos juntos como un par compatible.</string>
     <string name="gpu_recommended_for">Recomendado para esta GPU: %1$s.</string>
     <string name="gpu_refresh_hint">Actualiza para buscar controladores para esta GPU.</string>
@@ -1130,7 +1130,7 @@
     <string name="unfolded_controls_hint">Desplegado, el juego queda encima de los trackpads y los agarres traseros de Steam Deck. Plegado, el juego ocupa toda la pantalla.</string>
     <string name="pip_suspended">Suspendida</string>
     <string name="pip_not_ready">Imagen en imagen estará disponible cuando la sesión esté lista.</string>
-    <string name="pip_permission">Permite imagen en imagen para BrainDeck en los ajustes de Android.</string>
+    <string name="pip_permission">Permite imagen en imagen para GonDeck en los ajustes de Android.</string>
     <string name="pip_unavailable">Android no pudo abrir imagen en imagen.</string>
     <string name="game_shortcut">Acceso directo</string>
     <string name="game_shortcut_add">Añadir a la pantalla de inicio</string>
@@ -1140,7 +1140,7 @@
     <string name="game_link_copied">Enlace de inicio copiado</string>
     <string name="game_shortcut_unsupported">Este launcher no puede añadir accesos directos. Usa Copiar enlace de inicio.</string>
     <string name="game_link_invalid">Enlace de inicio de juego no válido.</string>
-    <string name="game_link_missing">Este juego ya no está en tu biblioteca de BrainDeck.</string>
+    <string name="game_link_missing">Este juego ya no está en tu biblioteca de GonDeck.</string>
     <string name="game_link_session_busy">Detén la sesión actual antes de iniciar un juego de Steam.</string>
     <string name="game_link_failed">No se pudo enviar el juego a Steam. Intenta iniciarlo de nuevo.</string>
     <string name="setup_retry_removal">Reintentar eliminación</string>
@@ -1165,9 +1165,9 @@
         <item quantity="other">Se importaron %1$d archivos del %2$s en %3$s</item>
     </plurals>
     <plurals name="main_saves_imported_backup">
-        <item quantity="one">Se importó %1$d archivo del %2$s en %3$s. Copia de las partidas anteriores en Download/BrainDeck/Saves/backups</item>
-        <item quantity="many">Se importaron %1$d archivos del %2$s en %3$s. Copia de las partidas anteriores en Download/BrainDeck/Saves/backups</item>
-        <item quantity="other">Se importaron %1$d archivos del %2$s en %3$s. Copia de las partidas anteriores en Download/BrainDeck/Saves/backups</item>
+        <item quantity="one">Se importó %1$d archivo del %2$s en %3$s. Copia de las partidas anteriores en Download/GonDeck/Saves/backups</item>
+        <item quantity="many">Se importaron %1$d archivos del %2$s en %3$s. Copia de las partidas anteriores en Download/GonDeck/Saves/backups</item>
+        <item quantity="other">Se importaron %1$d archivos del %2$s en %3$s. Copia de las partidas anteriores en Download/GonDeck/Saves/backups</item>
     </plurals>
     <string name="main_saves_pick_zip">Elige un zip de partidas guardadas para %1$s</string>
     <string name="main_saves_exporting">Exportando %1$s</string>
@@ -1227,7 +1227,7 @@
 
     <string name="upd_unknown_apps_failed">No se pudo abrir el ajuste \"Instalar apps desconocidas\" de Android</string>
     <string name="upd_couldnt_check">No se pudo comprobar: %1$s</string>
-    <string name="upd_no_download">Esta versión no tiene descarga para esta copia de BrainDeck</string>
+    <string name="upd_no_download">Esta versión no tiene descarga para esta copia de GonDeck</string>
     <string name="upd_stop_first">Detén primero la sesión en ejecución y después actualiza</string>
     <string name="upd_stage_downloading">Descargando</string>
     <string name="upd_stage_installing">Instalando</string>
@@ -1256,16 +1256,16 @@
     <string name="drivers_recommended_unpublished">Los controladores recomendados no están publicados ahora mismo</string>
     <string name="drivers_downloading_pair">Descargando %1$s %2$s…</string>
     <string name="drivers_updated_to">Actualizado a %1$s %2$s.</string>
-    <string name="drivers_updated_to_restart">Actualizado a %1$s %2$s. El controlador de pantalla se aplica al reiniciar BrainDeck.</string>
+    <string name="drivers_updated_to_restart">Actualizado a %1$s %2$s. El controlador de pantalla se aplica al reiniciar GonDeck.</string>
     <string name="drivers_switched_to">Cambiado a %1$s %2$s.</string>
-    <string name="drivers_switched_to_restart">Cambiado a %1$s %2$s. El controlador de pantalla se aplica al reiniciar BrainDeck.</string>
+    <string name="drivers_switched_to_restart">Cambiado a %1$s %2$s. El controlador de pantalla se aplica al reiniciar GonDeck.</string>
     <string name="drivers_using">Usando %1$s %2$s.</string>
-    <string name="drivers_using_restart">Usando %1$s %2$s. El controlador de pantalla se aplica al reiniciar BrainDeck.</string>
+    <string name="drivers_using_restart">Usando %1$s %2$s. El controlador de pantalla se aplica al reiniciar GonDeck.</string>
     <string name="drivers_not_a_driver">No es un zip de controlador: no es un controlador de AdrenoTools, ni un Turnip -Linux, ni un paquete Android + Linux</string>
     <string name="drivers_import_failed">La importación falló: %1$s</string>
     <string name="drivers_imported_unnamed">Controlador importado</string>
     <string name="drivers_using_bundle">Usando %1$s como controlador de runtime y de pantalla.</string>
-    <string name="drivers_using_bundle_restart">Usando %1$s como controlador de runtime y de pantalla. El controlador de pantalla se aplica al reiniciar BrainDeck.</string>
+    <string name="drivers_using_bundle_restart">Usando %1$s como controlador de runtime y de pantalla. El controlador de pantalla se aplica al reiniciar GonDeck.</string>
     <string name="drivers_deleted_bundle">%1$s eliminado (ambos controladores)</string>
     <string name="drivers_deleted">%1$s eliminado</string>
     <string name="drivers_release_status">Últimas: %1$s · comprobado %2$s</string>
@@ -1285,7 +1285,7 @@
         <item quantity="many">hace %1$d días</item>
         <item quantity="other">hace %1$d días</item>
     </plurals>
-    <string name="drivers_checking_sources">Comprobando Banners-Turnip, WinNative y BrainDeck…</string>
+    <string name="drivers_checking_sources">Comprobando Banners-Turnip, WinNative y GonDeck…</string>
     <string name="drivers_check_failed">falló la comprobación</string>
     <string name="drivers_installed_pick_either">%1$s instalado - elígelo en cualquiera de las listas para definir ambos controladores</string>
     <string name="drivers_installed_pick">%1$s instalado - elígelo en el menú</string>
@@ -1668,7 +1668,7 @@
     <string name="adbfix_no_pairing">No hay ninguna vinculación de Depuración inalámbrica guardada</string>
     <string name="adbfix_enter_address">Introduce la dirección IP y el puerto actuales de la Depuración inalámbrica</string>
 
-    <string name="adbpair_timed_out">Se agotó el tiempo de espera de la ventana de vinculación. Inténtalo de nuevo desde BrainDeck.</string>
+    <string name="adbpair_timed_out">Se agotó el tiempo de espera de la ventana de vinculación. Inténtalo de nuevo desde GonDeck.</string>
     <string name="adbpair_discovery_failed_code">No se pudo buscar la ventana de vinculación (%1$d). Comprueba que el Wi-Fi esté activado.</string>
     <string name="adbpair_discovery_failed">No se pudo buscar la ventana de vinculación: %1$s</string>
     <string name="adbpair_six_digits">Introduce los 6 dígitos del código</string>
@@ -1690,20 +1690,20 @@
     <string name="adbpair_enter_code">Introducir código</string>
     <string name="adbpair_title_working">Preparando Steam</string>
     <string name="adbpair_title_done">Steam está listo</string>
-    <string name="adbpair_done_text">Toca para volver a BrainDeck. Ya puedes desactivar la Depuración inalámbrica.</string>
+    <string name="adbpair_done_text">Toca para volver a GonDeck. Ya puedes desactivar la Depuración inalámbrica.</string>
     <string name="adbpair_title_failed">Se detuvo la configuración de la Depuración inalámbrica</string>
 
     <string name="selfinst_http">La descarga respondió HTTP %1$d</string>
     <string name="selfinst_size_mismatch">El tamaño de la descarga no coincidía con el APK publicado y se descartó - inténtalo de nuevo</string>
     <string name="selfinst_checksum_mismatch">La descarga no coincidía con su suma de verificación y se descartó - inténtalo de nuevo</string>
     <string name="selfinst_wrong_package">La actualización es para el paquete de Android %1$s, no %2$s</string>
-    <string name="selfinst_metadata_signer">Los metadatos de la actualización no indican la clave de firma de publicación de BrainDeck</string>
+    <string name="selfinst_metadata_signer">Los metadatos de la actualización no indican la clave de firma de publicación de GonDeck</string>
     <string name="selfinst_unreadable">Android no pudo leer el APK descargado</string>
     <string name="selfinst_apk_wrong_package">El APK descargado es para %1$s, no %2$s</string>
     <string name="selfinst_version_mismatch">El APK descargado indica versionCode %1$d, no el %2$d publicado</string>
     <string name="selfinst_downgrade">Android no instalará versionCode %1$d sobre el %2$d instalado</string>
     <string name="selfinst_no_signing">El APK descargado no tiene información de firma</string>
-    <string name="selfinst_wrong_signer">El APK descargado no está firmado con la clave de publicación de BrainDeck</string>
+    <string name="selfinst_wrong_signer">El APK descargado no está firmado con la clave de publicación de GonDeck</string>
     <string name="appupd_http">El catálogo de actualizaciones respondió HTTP %1$d</string>
 
     <string name="loadstate_starting">Iniciando la sesión…</string>
@@ -1729,7 +1729,7 @@
     <string name="pextra_installing">Instalando %1$s</string>
     <string name="pextra_install_failed">Falló la instalación de %1$s (salida %2$d)</string>
     <string name="pextra_could_not_install">No se pudo instalar %1$s</string>
-    <string name="esync_fetching">Descargando el paquete braindeck-esync</string>
+    <string name="esync_fetching">Descargando el paquete gondeck-esync</string>
 
     <string name="cmgr_fex_linux_helpers">con auxiliares de Linux</string>
     <string name="cmgr_fex_dlls_only">Solo DLL</string>
@@ -1787,7 +1787,7 @@
     <string name="gpuinfo_supported">Compatible</string>
     <string name="gpuinfo_experimental">Experimental: sus controladores son versiones de prueba</string>
     <string name="gpuinfo_below_tested">Por debajo del hardware probado (Adreno 725 y posteriores): puede que no funcione</string>
-    <string name="gpuinfo_unsupported">No compatible: BrainDeck necesita una GPU Adreno (Snapdragon)</string>
+    <string name="gpuinfo_unsupported">No compatible: GonDeck necesita una GPU Adreno (Snapdragon)</string>
 
     <string name="turnip_rate_limited">Se alcanzó el límite de solicitudes de GitHub - inténtalo más tarde</string>
     <string name="turnip_github_http">GitHub respondió HTTP %1$d</string>
@@ -1830,10 +1830,10 @@
     <string name="phantom_instructions_not_applicable">Esta versión de Android no usa este límite.</string>
     <string name="phantom_fix_toggle">Activa “Desactivar restricciones de procesos secundarios” en Opciones de desarrollador y deja activadas las Opciones de desarrollador después.</string>
     <string name="phantom_fix_no_toggle">Esta versión de Android no tiene un interruptor para ello. Usa la Depuración inalámbrica para cambiarlo desde este dispositivo.</string>
-    <string name="upd_block_no_apk">Esta versión no tiene descarga para esta copia de BrainDeck.</string>
+    <string name="upd_block_no_apk">Esta versión no tiene descarga para esta copia de GonDeck.</string>
     <string name="upd_block_version_code">Android no la instalará sobre esta versión porque su versionCode %1$d es inferior al %2$d instalado.</string>
     <string name="upd_fail_downgrade">Android no instala una versión anterior sobre una más reciente. Quédate en esta versión hasta que el canal la alcance.</string>
-    <string name="upd_fail_signature">Esta copia de BrainDeck está firmada de otro modo (¿una compilación local?), así que Android no la actualizará sobre la instalada.</string>
+    <string name="upd_fail_signature">Esta copia de GonDeck está firmada de otro modo (¿una compilación local?), así que Android no la actualizará sobre la instalada.</string>
     <string name="upd_fail_storage">No hay espacio libre suficiente para la actualización.</string>
     <string name="upd_fail_aborted">Se canceló la actualización.</string>
     <string name="upd_fail_with_message">La actualización no se instaló: %1$s</string>
@@ -1858,7 +1858,7 @@
     <string name="gstore_volume_free">%1$s · %2$s libres</string>
     <string name="mode_storage_auto_short">Automático</string>
     <string name="appupd_catalog_rejected">El catálogo de actualizaciones no superó las comprobaciones (%1$s)</string>
-    <string name="main_adb_clip_label">Ajuste de procesos secundarios de BrainDeck</string>
+    <string name="main_adb_clip_label">Ajuste de procesos secundarios de GonDeck</string>
     <string name="setup_signed_in_offline_unnamed">Sesión iniciada · modo sin conexión</string>
     <string name="setup_signed_in_unnamed">Sesión iniciada</string>
     <string name="driver_tag_bundled">INCLUIDO</string>
@@ -2176,7 +2176,7 @@
     <string name="touch_speed_normal">Normal</string>
     <string name="touch_speed_fast">Rápida</string>
     <string name="touch_edit_layout">Editar disposición</string>
-    <string name="touch_braindeck_menu">Menú de BrainDeck</string>
+    <string name="touch_gondeck_menu">Menú de GonDeck</string>
     <string name="touch_drag_hint">Arrastra controles a la pantalla</string>
     <string name="touch_arrange">Organizar</string>
     <string name="touch_discard">Descartar</string>

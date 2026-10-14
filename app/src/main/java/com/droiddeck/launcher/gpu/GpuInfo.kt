@@ -21,7 +21,8 @@ data class GpuInfo(
         A7XX("Adreno 7xx"),
         A6XX("Adreno 6xx"),
         ADRENO_UNKNOWN("Adreno"),
-        NOT_ADRENO("Not an Adreno GPU");
+        MALI("ARM Mali (Tensor/Dimensity)"),
+        NOT_ADRENO("Other GPU");
 
         fun label(context: Context): String = if (this == NOT_ADRENO) context.getString(R.string.gpuinfo_not_adreno) else label
     }
@@ -30,6 +31,7 @@ data class GpuInfo(
 
     val support: Support
         get() = when {
+            family == Family.MALI -> Support.TESTED
             family == Family.NOT_ADRENO -> Support.UNSUPPORTED
             family == Family.A6XX && model == 650 -> Support.TESTED
             family == Family.A8XX -> Support.TESTED
@@ -42,7 +44,7 @@ data class GpuInfo(
             Support.TESTED -> "Supported"
             Support.UNTESTED -> if (family == Family.A7XX_LOW) "Experimental: its drivers are test builds"
                 else "Outside tested hardware (Adreno 650, 725 and newer): it may not run"
-            Support.UNSUPPORTED -> "Not supported: DroidDeck needs an Adreno (Snapdragon) GPU"
+            Support.UNSUPPORTED -> "Not supported: GonDeck requires an ARM Mali (Tensor/Dimensity) or Adreno (Snapdragon) GPU"
         }
 
     fun supportText(context: Context): String = context.getString(when (support) {
@@ -58,9 +60,10 @@ data class GpuInfo(
 
         fun detect(): GpuInfo {
             val adreno = File("/sys/class/kgsl/kgsl-3d0").exists() || File("/vendor/lib64/hw/vulkan.adreno.so").exists()
+            val mali = File("/dev/mali0").exists()
             val raw = listOf("/sys/class/kgsl/kgsl-3d0/gpu_model", "/sys/class/kgsl/kgsl-3d0/gpu_chipid")
                 .firstNotNullOfOrNull { FileUtils.readString(File(it))?.trim()?.takeIf(String::isNotEmpty) }
-            val soc = if (adreno) SocNames.label() else ""
+            val soc = if (adreno) SocNames.label() else if (mali) Build.HARDWARE else ""
             val fromKernel = raw?.let { threeDigits(it) } ?: 0
             val fromVulkan = if (fromKernel > 0 || !adreno) 0 else VulkanInfo.cachedOrNull()?.get("device")?.let { threeDigits(it) } ?: 0
             val fromPlatform = if (fromKernel > 0 || fromVulkan > 0 || !adreno) 0 else platformModel()
@@ -71,10 +74,16 @@ data class GpuInfo(
                 fromPlatform > 0 -> "platform"
                 else -> ""
             }
-            val family = familyOf(adreno, model)
+            val family = if (mali) Family.MALI else familyOf(adreno, model)
             val samsung = Build.MANUFACTURER.equals("samsung", ignoreCase = true)
+            val gpuDisplayName = when {
+                mali -> "ARM Mali (Google Tensor / Dimensity)"
+                !adreno -> Build.HARDWARE.ifBlank { UNNAMED }
+                model > 0 -> "Adreno $model"
+                else -> "Adreno"
+            }
             return GpuInfo(
-                name = if (!adreno) Build.HARDWARE.ifBlank { UNNAMED } else if (model > 0) "Adreno $model" else "Adreno",
+                name = gpuDisplayName,
                 model = model, family = family, soc = soc,
                 oneUi8Gen2 = samsung && model == 740,
                 kgslName = raw.orEmpty(), modelSource = source,

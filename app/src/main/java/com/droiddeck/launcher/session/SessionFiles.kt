@@ -235,7 +235,7 @@ object SessionFiles {
             val selectedId = scalar(block, "MovieID")
             val selectedPath = scalar(block, "LocalPath")
             if (selectedPath == path) {
-                Log.i(TAG, "Steam startup movie is set to DroidDeck")
+                Log.i(TAG, "Steam startup movie is set to GonDeck")
                 return
             }
             val legacyDefault = selectedId == "0" && selectedPath == legacyPath

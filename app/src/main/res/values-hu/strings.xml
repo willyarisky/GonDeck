@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BrainDeck</string>
+    <string name="app_name">GonDeck</string>
     <string-array name="loading_hints">
         <item>Az első indítás letölti a Steamet. Ez néhány percet vehet igénybe.</item>
         <item>Alapértelmezés szerint az alkalmazás elhagyása szünetelteti a Steamet; visszatéréskor ott folytatja, ahol abbahagyta.</item>
@@ -74,10 +74,10 @@
     <string name="game_env_vkd3d_config">VKD3D-beállítások D3D12-höz. A nodxr kikapcsolja a sugárkövetést; csak olyan játéknál használja, amelynek szüksége van rá.</string>
     <string name="game_env_proton_log">Állítsa 1-re a Proton diagnosztikai napló bekapcsolásához. A naplózás csökkentheti a teljesítményt, és tárhelyet használ.</string>
     <string name="game_env_wined3d">Állítsa 1-re, hogy a DXVK helyett az OpenGL-alapú WineD3D-t használja D3D9–11 kompatibilitási teszteléshez.</string>
-    <string name="game_env_no_ntsync">Állítsa 1-re, hogy ez a játék ne használja az ntsyncet (braindeck-ntsync vagy kernelillesztőprogram); ekkor a braindeck-esynct használja, ha van csomag, egyébként a braindeck-fsynct.</string>
-    <string name="game_env_no_esync">Állítsa 1-re a braindeck-esync kikapcsolásához ennél a játéknál; helyette a braindeck-fsynct használja, vagy a braindeck-ntsynct, ha az fsync is ki van kapcsolva.</string>
-    <string name="game_env_no_fsync">Állítsa 1-re, hogy ez a játék ne használja a braindeck-fsynct; ekkor a braindeck-esynct használja, ha van csomag, egyébként a braindeck-ntsynct.</string>
-    <string name="game_env_fsync_first">Állítsa 1-re, hogy ez a játék a braindeck-fsyncen fusson, vagy 0-ra, hogy a braindeck-esync kerüljön előre, ha van csomag a Protonjához.</string>
+    <string name="game_env_no_ntsync">Állítsa 1-re, hogy ez a játék ne használja az ntsyncet (gondeck-ntsync vagy kernelillesztőprogram); ekkor a gondeck-esynct használja, ha van csomag, egyébként a gondeck-fsynct.</string>
+    <string name="game_env_no_esync">Állítsa 1-re a gondeck-esync kikapcsolásához ennél a játéknál; helyette a gondeck-fsynct használja, vagy a gondeck-ntsynct, ha az fsync is ki van kapcsolva.</string>
+    <string name="game_env_no_fsync">Állítsa 1-re, hogy ez a játék ne használja a gondeck-fsynct; ekkor a gondeck-esynct használja, ha van csomag, egyébként a gondeck-ntsynct.</string>
+    <string name="game_env_fsync_first">Állítsa 1-re, hogy ez a játék a gondeck-fsyncen fusson, vagy 0-ra, hogy a gondeck-esync kerüljön előre, ha van csomag a Protonjához.</string>
     <string name="game_env_xalia">Állítsa 0-ra a Proton kontroller-navigációs segédjének kikapcsolásához ennél a játéknál.</string>
     <string name="game_env_hud">DXVK overlay D3D9–11-hez. Az fps megjeleníti a képkockasebességet; beállítás nélkül elrejti.</string>
     <string name="game_env_dxvk_config">Pontosvesszővel elválasztott DXVK-beállítások. A legújabb buildek a dxvk.maxFrameRate beállítást használják a képkocka-korlátozáshoz; szokásos játékhoz a munkamenet képkocka-korlátozóját érdemes használni.</string>
@@ -132,7 +132,7 @@
     <string name="user_apps_remove_confirm">Nyomja meg újra az eltávolításhoz</string>
     <string name="user_apps_stop_session">Állítsa le a munkamenetet az eltávolításhoz</string>
     <string name="user_apps_script_linked">A %1$s a saját mappájából fut, amely a helyén csatolva van a munkamenetbe. Az alkalmazás eltávolítása nem érinti azt a mappát.</string>
-    <string name="user_apps_script_copied">A %1$s a mappájának egy, a BrainDecken belüli másolatából fut. Az alkalmazás eltávolítása törli a másolatot, az eredetit nem.</string>
+    <string name="user_apps_script_copied">A %1$s a mappájának egy, a GonDecken belüli másolatából fut. Az alkalmazás eltávolítása törli a másolatot, az eredetit nem.</string>
     <string name="user_apps_runtime_required">Előbb telepítse a Linux futtatókörnyezetet</string>
     <string name="user_apps_file_gone">A fájl már nincs meg</string>
     <string name="user_apps_no_space">Nincs elég szabad hely: a mappa másolásához %1$s szükséges</string>
@@ -167,7 +167,7 @@
     <string name="app_fex_off">Ki</string>
     <string name="app_fex_hint">A FEX x86-os Linux-programokat futtat ezen az ARM64-es eszközön. Az Automatikus akkor használja, ha a program x86-ra készült.</string>
     <string name="app_fex_x86">%1$s a FEX-en keresztül</string>
-    <string name="app_fex_not_ready">Ez a program %1$s PC-khez készült, és a FEX-en keresztül fut, amely még nincs beállítva. Nyissa meg egyszer a Steamet bejelentkezve: a BrainDeck ekkor letölti a FEX-et és a szükséges Steam Linux Runtime-ot, majd ez megnyílik.</string>
+    <string name="app_fex_not_ready">Ez a program %1$s PC-khez készült, és a FEX-en keresztül fut, amely még nincs beállítva. Nyissa meg egyszer a Steamet bejelentkezve: a GonDeck ekkor letölti a FEX-et és a szükséges Steam Linux Runtime-ot, majd ez megnyílik.</string>
     <string name="session_end_program">Ez a program</string>
     <string name="session_end_fex_missing">A %1$s x86 PC-khez készült, és a FEX-en keresztül fut, amely még nincs telepítve. Indítsa el egyszer a Steamet bejelentkezve, és hagyja letölteni a FEX-et és a Steam Linux Runtime-ot, majd indítsa el ezt újra.</string>
     <string name="add_app_flatpak_hint">Egy Flathub-alkalmazásazonosító vagy a Flathub-oldala. A Flatpak előbb beállításra kerül, ha még nincs beállítva.</string>
@@ -202,13 +202,13 @@
     <string name="edit_app_save">Mentés</string>
     <string name="add_app_checking_folder">A mappa ellenőrzése…</string>
     <string name="add_app_folder_linked">A mappája a munkamenetbe van csatolva: %1$s</string>
-    <string name="add_app_folder_copied">A mappája Linux-programokat tartalmaz, amelyeket a megosztott tárhely nem tud futtatni, ezért átkerül a BrainDeckbe (%1$s).</string>
+    <string name="add_app_folder_copied">A mappája Linux-programokat tartalmaz, amelyeket a megosztott tárhely nem tud futtatni, ezért átkerül a GonDeckbe (%1$s).</string>
     <string name="add_app_confirm">Hozzáadás</string>
     <string name="add_app_cancel">Mégse</string>
     <string name="add_app_runtime_required">Előbb telepítse a Linux futtatókörnyezetet a Beállításból.</string>
     <string name="add_app_busy">Várja meg, amíg a(z) %1$s befejeződik.</string>
     <string name="steam_compat_label">Kompatibilis</string>
-    <string name="proton_compatible_note">A Steam Kompatibilitás menüjében „%1$s” jelölésű buildek tartalmazzák a BrainDeck prefixjavításait, és ezeken itt elindulnak a játékok. Az alapértelmezett a Proton Experimental ARM64 (%1$s), vagy a Proton 11.0 ARM64 (%1$s), ha az az újabb build telepítve van. A Valve saját, jelölés nélküli Proton-bejegyzései nem tudnak játékot elindítani ezen az eszközön.</string>
+    <string name="proton_compatible_note">A Steam Kompatibilitás menüjében „%1$s” jelölésű buildek tartalmazzák a GonDeck prefixjavításait, és ezeken itt elindulnak a játékok. Az alapértelmezett a Proton Experimental ARM64 (%1$s), vagy a Proton 11.0 ARM64 (%1$s), ha az az újabb build telepítve van. A Valve saját, jelölés nélküli Proton-bejegyzései nem tudnak játékot elindítani ezen az eszközön.</string>
     <string name="proton_installed_compatible">%1$s telepítve · %2$s</string>
     <string name="common_cancel">Mégse</string>
     <string name="common_auto">Automatikus</string>
@@ -280,8 +280,8 @@
     <string name="mode_background_downloads_hint">Elhalasztja a háttérbeli felfüggesztést, amíg a Steam aktívan letölt.</string>
     <string name="mode_suspend_note">Az Automatikus szüneteltet a háttérben, és megjelenéskor folytatja. A Manuális megvárja a Folytatást. A Soha mindig futva tartja.</string>
     <string name="mode_startup">Indítás</string>
-    <string name="mode_steam_startup">Steam indítása a BrainDeckkel</string>
-    <string name="mode_steam_startup_hint">Megnyitja a Steam-munkamenetet a BrainDeck indulásakor.</string>
+    <string name="mode_steam_startup">Steam indítása a GonDeckkel</string>
+    <string name="mode_steam_startup_hint">Megnyitja a Steam-munkamenetet a GonDeck indulásakor.</string>
     <string name="mode_decky">Decky</string>
     <string name="mode_decky_checking">Kiadások keresése…</string>
     <string name="mode_decky_ready">Készen áll a %1$s telepítésére.</string>
@@ -373,7 +373,7 @@
     <string name="mode_wifi_open_settings">Beállítások megnyitása</string>
     <string name="mode_wifi_continue">Folytatás</string>
     <string name="mode_wifi_explain_title">Bekapcsolja a Wi-Fi felderítést?</string>
-    <string name="mode_wifi_explain_text">Az Android helymeghatározási engedélyt igényel a Wi-Fi nevek beolvasásához és a közeli hálózatok felderítéséhez. A BrainDeck ezt a hozzáférést arra használja, hogy megjelenítse ezeket a hálózatokat a Steamben. Nem követjük a helyadatait. Az internet-hozzáférés ezen engedély nélkül is működik.</string>
+    <string name="mode_wifi_explain_text">Az Android helymeghatározási engedélyt igényel a Wi-Fi nevek beolvasásához és a közeli hálózatok felderítéséhez. A GonDeck ezt a hozzáférést arra használja, hogy megjelenítse ezeket a hálózatokat a Steamben. Nem követjük a helyadatait. Az internet-hozzáférés ezen engedély nélkül is működik.</string>
     <string name="mode_storage">Játéktárhely</string>
     <string name="mode_storage_auto">Automatikus – az SD-kártya, ha van, és a Játékok mappái</string>
     <string name="mode_storage_auto_none">Automatikus – a Játékok mappái, és az SD-kártya, ha van (jelenleg nincs)</string>
@@ -458,8 +458,8 @@
     <string name="comp_swapped">%1$s · %2$d kicserélve</string>
     <string name="comp_all_original">%1$s · mind eredeti</string>
     <string name="comp_game_running_suffix">%1$s · a játék fut</string>
-    <string name="comp_esync_pack">%1$s · braindeck-esync csomag</string>
-    <string name="comp_esync_wanted">%1$s · még nincs braindeck-esync csomag</string>
+    <string name="comp_esync_pack">%1$s · gondeck-esync csomag</string>
+    <string name="comp_esync_wanted">%1$s · még nincs gondeck-esync csomag</string>
     <string name="comp_esync_builtin">%1$s · az esync be van építve, nincs szükség csomagra</string>
     <string name="comp_gpu_drivers">GPU-illesztőprogramok</string>
     <string name="comp_reapplied">%1$s · újraalkalmazva indításkor: %2$s</string>
@@ -469,7 +469,7 @@
     <string name="comp_applies_next_game">A következő játékindítástól érvényes</string>
     <string name="comp_import_zip">.zip importálása</string>
     <string name="comp_reading">Protonok beolvasása…</string>
-    <string name="comp_no_proton">Még nincs telepítve Proton. Indítsa el egyszer a Steamet az ARM64 Protonjának letöltéséhez, vagy adjon hozzá GE-Protont, CachyOS-t vagy BrainDeck-Protont a Beállításból.</string>
+    <string name="comp_no_proton">Még nincs telepítve Proton. Indítsa el egyszer a Steamet az ARM64 Protonjának letöltéséhez, vagy adjon hozzá GE-Protont, CachyOS-t vagy GonDeck-Protont a Beállításból.</string>
     <string name="comp_original">Eredeti · %1$s</string>
     <string name="comp_this_build">%1$s · ez a build</string>
     <string name="comp_earlier_build">%1$s · korábbi build</string>
@@ -523,12 +523,12 @@
     <string name="perf_sysmem">Turnip: sysmem renderelés</string>
     <string name="perf_sysmem_hint">Gyorsabb a Steamhez és a legtöbb játékhoz. Adreno 710/720/722-n szükséges.</string>
     <string name="perf_xalia">A Steam xalia segítőjének kihagyása</string>
-    <string name="perf_fastsync">braindeck-ntsync (kísérleti)</string>
-    <string name="perf_fastsync_hint">A Linux ntsync illesztőprogram felhasználói szintű helyettesítője, teszteléshez. Amíg be van kapcsolva, a Proton ezt használja a braindeck-esync és a braindeck-fsync helyett. A Proton Experimental ARM64-gyel, a GE-Protonnal és a proton-cachyosszal működik. A következő munkamenettől érvényes.</string>
-    <string name="perf_esync">braindeck-esync</string>
-    <string name="perf_fsync">braindeck-fsync előre</string>
-    <string name="perf_fsync_hint">A Proton saját fsyncjét futtatja az eredeti Proton-fájlokon, felhasználói szinten biztosított futex_waitv-vel, így nincs szükség csomagra, és azonnal működik, amint a Steam frissíti a Protont. Amíg be van kapcsolva, a játékok ezt használják a braindeck-esync előtt, kivéve azt a néhányat, amelyet a Proton kizár az fsyncből. A következő munkamenettől érvényes.</string>
-    <string name="perf_esync_hint">A játékok Windows-szálai eventfd-n és megosztott memórián keresztül várnak egymásra, a wineserveren át vezető körök helyett. Egy az adott Proton buildhez készült braindeck-esync csomagot használ; a csomagok automatikusan letöltődnek. Amíg egy új Proton buildhez nincs csomag, a braindeck-fsync helyettesíti. A következő munkamenettől érvényes.</string>
+    <string name="perf_fastsync">gondeck-ntsync (kísérleti)</string>
+    <string name="perf_fastsync_hint">A Linux ntsync illesztőprogram felhasználói szintű helyettesítője, teszteléshez. Amíg be van kapcsolva, a Proton ezt használja a gondeck-esync és a gondeck-fsync helyett. A Proton Experimental ARM64-gyel, a GE-Protonnal és a proton-cachyosszal működik. A következő munkamenettől érvényes.</string>
+    <string name="perf_esync">gondeck-esync</string>
+    <string name="perf_fsync">gondeck-fsync előre</string>
+    <string name="perf_fsync_hint">A Proton saját fsyncjét futtatja az eredeti Proton-fájlokon, felhasználói szinten biztosított futex_waitv-vel, így nincs szükség csomagra, és azonnal működik, amint a Steam frissíti a Protont. Amíg be van kapcsolva, a játékok ezt használják a gondeck-esync előtt, kivéve azt a néhányat, amelyet a Proton kizár az fsyncből. A következő munkamenettől érvényes.</string>
+    <string name="perf_esync_hint">A játékok Windows-szálai eventfd-n és megosztott memórián keresztül várnak egymásra, a wineserveren át vezető körök helyett. Egy az adott Proton buildhez készült gondeck-esync csomagot használ; a csomagok automatikusan letöltődnek. Amíg egy új Proton buildhez nincs csomag, a gondeck-fsync helyettesíti. A következő munkamenettől érvényes.</string>
     <string name="perf_xalia_hint">Kikapcsolja a Proton kontroller-navigációs segédjét, amely minden játékban CPU-t használ.</string>
     <string name="perf_seccomp">A proot futtatása seccomp nélkül</string>
     <string name="perf_seccomp_hint">Javíthatja a hiányzó szisztémahívás-hibákat egyes kerneleken. Csökkentheti a teljesítményt.</string>
@@ -691,13 +691,13 @@
     <string name="setup_language_system">Rendszer alapértelmezett (%1$s)</string>
     <string name="setup_language_system_short">Rendszer alapértelmezett</string>
     <string name="setup_app_scale">Alkalmazásméret</string>
-    <string name="setup_app_scale_hint">A BrainDeck szövege és vezérlői</string>
+    <string name="setup_app_scale_hint">A GonDeck szövege és vezérlői</string>
     <string name="setup_app_scale_default">%1$d%% (Alapértelmezett)</string>
     <string name="setup_theme">Téma</string>
     <string name="setup_theme_hint">Az indítóalkalmazás megjelenése</string>
     <string name="setup_home">Használat kezdőképernyőként</string>
-    <string name="setup_home_on">A BrainDeck lehet a kezdőképernyő alkalmazás</string>
-    <string name="setup_home_off">A BrainDeck soha nem jelenik meg kezdőképernyő alkalmazásként</string>
+    <string name="setup_home_on">A GonDeck lehet a kezdőképernyő alkalmazás</string>
+    <string name="setup_home_off">A GonDeck soha nem jelenik meg kezdőképernyő alkalmazásként</string>
     <string name="setup_orientation">Tájolás</string>
     <string name="setup_orientation_auto">Automatikus fekvő</string>
     <string name="setup_orientation_landscape">Fekvő</string>
@@ -776,16 +776,16 @@
     <string name="store_website">Weboldal</string>
     <string name="store_verified">Ellenőrzött</string>
     <string name="upd_title">Frissítések</string>
-    <string name="upd_build">BrainDeck %1$s · %2$s</string>
+    <string name="upd_build">GonDeck %1$s · %2$s</string>
     <string name="upd_checked">Ellenőrizve: %1$s</string>
     <string name="upd_not_checked">Még nincs ellenőrizve</string>
-    <string name="upd_perm_title">Engedélyezze, hogy a BrainDeck magát frissítse</string>
+    <string name="upd_perm_title">Engedélyezze, hogy a GonDeck magát frissítse</string>
     <string name="upd_perm_text">A következő képernyőn kapcsolja be az „Engedélyezés ebből a forrásból” lehetőséget, majd térjen vissza. A frissítés önműködően folytatódik.</string>
     <string name="upd_open_settings">Beállítások megnyitása</string>
     <string name="upd_not_now">Most nem</string>
     <string name="upd_signed_status">Másként aláírva</string>
     <string name="upd_signed_headline">Nem frissíthető a helyén</string>
-    <string name="upd_signed_detail">Ez a másolat nincs a BrainDeck kiadási kulcsával aláírva, így a frissítések nem telepíthetők rá. Távolítsa el az átváltáshoz.</string>
+    <string name="upd_signed_detail">Ez a másolat nincs a GonDeck kiadási kulcsával aláírva, így a frissítések nem telepíthetők rá. Távolítsa el az átváltáshoz.</string>
     <string name="upd_available">Elérhető frissítés</string>
     <string name="upd_blocked_status">Nem telepíthető</string>
     <string name="upd_switch">Kész az átváltásra</string>
@@ -807,7 +807,7 @@
     <string name="upd_stop_session">Állítsa le a futó munkamenetet a frissítéshez.</string>
     <string name="upd_less">Kevesebb</string>
     <string name="upd_more">Több</string>
-    <string name="upd_new_stable">BrainDeck %1$s</string>
+    <string name="upd_new_stable">GonDeck %1$s</string>
     <string name="upd_new_preview">Új Preview build</string>
     <string name="upd_new_test">PR #%1$d teszt build</string>
     <string name="upd_mb">%1$d MB</string>
@@ -822,7 +822,7 @@
     <string name="upd_tests_hint">Próbáljon ki egy javítást a kiadása előtt</string>
     <string name="upd_tests_none">Jelenleg nincs</string>
     <string name="upd_pr">PR #%1$d</string>
-    <string name="upd_not_built">Nincs buildelve ehhez a BrainDeck-másolathoz</string>
+    <string name="upd_not_built">Nincs buildelve ehhez a GonDeck-másolathoz</string>
     <string name="upd_updated">Frissítve: %1$s</string>
     <string name="upd_test_name">a PR #%1$d teszt</string>
     <string name="upd_while_ago">egy ideje</string>
@@ -845,13 +845,13 @@
     <string name="gate_fix_for_me">Javítsa ezt helyettem</string>
     <string name="gate_toggle_steps">Kapcsolja be a „Gyermekfolyamat-korlátozások letiltása” kapcsolót, majd térjen vissza. Hagyja bekapcsolva a Fejlesztői beállításokat, különben a kapcsoló visszakapcsol.</string>
     <string name="gate_open_dev">Fejlesztői beállítások megnyitása</string>
-    <string name="gate_no_toggle">Ehhez az Android-verzióhoz nincs kapcsoló, ezért a BrainDeck a vezeték nélküli hibakeresésen keresztül módosítja. Körülbelül egy percet vesz igénybe, számítógép nélkül.</string>
+    <string name="gate_no_toggle">Ehhez az Android-verzióhoz nincs kapcsoló, ezért a GonDeck a vezeték nélküli hibakeresésen keresztül módosítja. Körülbelül egy percet vesz igénybe, számítógép nélkül.</string>
     <string name="gate_needs_wifi">A vezeték nélküli hibakereséshez Wi-Fi szükséges. Bármelyik hálózat megfelel; internetkapcsolat nem szükséges.</string>
-    <string name="gate_needs_notifications">A párosítási kód egy értesítésben jelenik meg. Engedélyezze az értesítéseket a BrainDecknek, vagy használja az Egyéb módokat.</string>
+    <string name="gate_needs_notifications">A párosítási kód egy értesítésben jelenik meg. Engedélyezze az értesítéseket a GonDecknek, vagy használja az Egyéb módokat.</string>
     <string name="gate_allow_notifications">Értesítések engedélyezése</string>
     <string name="gate_step1">Nyissa meg: Beállítások → Fejlesztői beállítások → Vezeték nélküli hibakeresés, és kapcsolja be</string>
     <string name="gate_step2">Koppintson az „Eszköz párosítása párosítási kóddal” lehetőségre</string>
-    <string name="gate_step3">Írja be a kódot a BrainDeck értesítésébe</string>
+    <string name="gate_step3">Írja be a kódot a GonDeck értesítésébe</string>
     <string name="gate_waiting">Várakozás a párosítási felugró ablakra…</string>
     <string name="gate_code_needed">Felugró ablak megtalálva. Írja be a kódját az értesítésbe.</string>
     <string name="gate_status">Állapot</string>
@@ -967,7 +967,7 @@
     <string name="desktop_removing">Asztal eltávolítása</string>
     <string name="desktop_removed">Asztal eltávolítva</string>
     <string name="desktop_cleaning_legacy">Régi LXQt-fájlok eltávolítása</string>
-    <string name="desktop_removal_unknown">Frissítse a BrainDecket, mielőtt eltávolítja ezt az asztali verziót.</string>
+    <string name="desktop_removal_unknown">Frissítse a GonDecket, mielőtt eltávolítja ezt az asztali verziót.</string>
     <string name="content_linux_desktop">Linux-asztal</string>
     <string name="content_linux_desktop_hint">KDE Plasma, Firefox és az emulátorai</string>
     <string name="games_empty">A Steamben telepített játékok a munkamenet után itt jelennek meg.</string>
@@ -1009,11 +1009,11 @@
     <string name="gpu_set_with_runtime">A futtatókörnyezet-illesztőprogrammal együtt beállítva: a %1$s mindkettőt tartalmazza.</string>
     <string name="gpu_runtime_hint">A játékok és az asztal használja.</string>
     <string name="gpu_runtime_default">Futtatókörnyezet alapértelmezése</string>
-    <string name="gpu_display_hint">A képkockákat rajzolja a képernyőre. A BrainDeck újraindítása után lép érvénybe.</string>
+    <string name="gpu_display_hint">A képkockákat rajzolja a képernyőre. A GonDeck újraindítása után lép érvénybe.</string>
     <string name="gpu_auto_by_gpu">Automatikus – GPU szerint kiválasztva</string>
     <string name="gpu_manage">Letöltés, importálás vagy törlés…</string>
     <string name="gpu_in_use_caps">HASZNÁLATBAN</string>
-    <string name="gpu_builtin">A BrainDeckbe épített illesztőprogramok</string>
+    <string name="gpu_builtin">A GonDeckbe épített illesztőprogramok</string>
     <string name="gpu_matched_pair">A futtatókörnyezet- és megjelenítő-illesztőprogramok együtt, párként beállítva.</string>
     <string name="gpu_recommended_for">Ehhez a GPU-hoz ajánlott: %1$s.</string>
     <string name="gpu_refresh_hint">Frissítsen az ehhez a GPU-hoz tartozó illesztőprogramok kereséséhez.</string>
@@ -1116,7 +1116,7 @@
     <string name="unfolded_controls_hint">Kinyitva a játék a Steam Deck érintőpadjai és hátsó fogói fölött jelenik meg. Összecsukva a játék teljes képernyős.</string>
     <string name="pip_suspended">Felfüggesztve</string>
     <string name="pip_not_ready">A kép a képben mód csak a munkamenet elkészülése után érhető el.</string>
-    <string name="pip_permission">Engedélyezze a kép a képben módot a BrainDeck számára az Android beállításaiban.</string>
+    <string name="pip_permission">Engedélyezze a kép a képben módot a GonDeck számára az Android beállításaiban.</string>
     <string name="pip_unavailable">Az Android nem tudta megnyitni a kép a képben módot.</string>
     <string name="game_shortcut">Parancsikon</string>
     <string name="game_shortcut_add">Hozzáadás a kezdőképernyőhöz</string>
@@ -1126,7 +1126,7 @@
     <string name="game_link_copied">Indítási link másolva</string>
     <string name="game_shortcut_unsupported">Ez az indítóalkalmazás nem tud parancsikont hozzáadni. Használja helyette az „Indítási link másolása” lehetőséget.</string>
     <string name="game_link_invalid">Érvénytelen játékindítási link.</string>
-    <string name="game_link_missing">Ez a játék már nincs a BrainDeck könyvtárában.</string>
+    <string name="game_link_missing">Ez a játék már nincs a GonDeck könyvtárában.</string>
     <string name="game_link_session_busy">Állítsa le a jelenlegi munkamenetet, mielőtt elindít egy Steam-játékot.</string>
     <string name="game_link_failed">Nem sikerült elküldeni a játékot a Steamnek. Próbálja újra elindítani.</string>
     <string name="setup_retry_removal">Eltávolítás újra</string>
@@ -1150,8 +1150,8 @@
         <item quantity="other">%1$d fájl importálva innen: %2$s, ide: %3$s</item>
     </plurals>
     <plurals name="main_saves_imported_backup">
-        <item quantity="one">%1$d fájl importálva innen: %2$s, ide: %3$s. A régi mentések mentve itt: Download/BrainDeck/Saves/backups</item>
-        <item quantity="other">%1$d fájl importálva innen: %2$s, ide: %3$s. A régi mentések mentve itt: Download/BrainDeck/Saves/backups</item>
+        <item quantity="one">%1$d fájl importálva innen: %2$s, ide: %3$s. A régi mentések mentve itt: Download/GonDeck/Saves/backups</item>
+        <item quantity="other">%1$d fájl importálva innen: %2$s, ide: %3$s. A régi mentések mentve itt: Download/GonDeck/Saves/backups</item>
     </plurals>
     <string name="main_saves_pick_zip">Válasszon mentés zip fájlt ehhez: %1$s</string>
     <string name="main_saves_exporting">%1$s exportálása</string>
@@ -1209,7 +1209,7 @@
 
     <string name="upd_unknown_apps_failed">Nem sikerült megnyitni az Android „Ismeretlen alkalmazások telepítése” beállítását</string>
     <string name="upd_couldnt_check">Nem sikerült ellenőrizni: %1$s</string>
-    <string name="upd_no_download">Ez a build nem rendelkezik letöltéssel a BrainDeck ezen másolatához</string>
+    <string name="upd_no_download">Ez a build nem rendelkezik letöltéssel a GonDeck ezen másolatához</string>
     <string name="upd_stop_first">Előbb állítsa le a futó munkamenetet, majd frissítsen</string>
     <string name="upd_stage_downloading">Letöltés</string>
     <string name="upd_stage_installing">Telepítés</string>
@@ -1238,16 +1238,16 @@
     <string name="drivers_recommended_unpublished">Az ajánlott illesztőprogramok jelenleg nincsenek kiadva</string>
     <string name="drivers_downloading_pair">%1$s %2$s letöltése…</string>
     <string name="drivers_updated_to">Frissítve erre: %1$s %2$s.</string>
-    <string name="drivers_updated_to_restart">Frissítve erre: %1$s %2$s. A megjelenítő-illesztőprogram a BrainDeck újraindítása után lép érvénybe.</string>
+    <string name="drivers_updated_to_restart">Frissítve erre: %1$s %2$s. A megjelenítő-illesztőprogram a GonDeck újraindítása után lép érvénybe.</string>
     <string name="drivers_switched_to">Átváltva erre: %1$s %2$s.</string>
-    <string name="drivers_switched_to_restart">Átváltva erre: %1$s %2$s. A megjelenítő-illesztőprogram a BrainDeck újraindítása után lép érvénybe.</string>
+    <string name="drivers_switched_to_restart">Átváltva erre: %1$s %2$s. A megjelenítő-illesztőprogram a GonDeck újraindítása után lép érvénybe.</string>
     <string name="drivers_using">%1$s %2$s használatban.</string>
-    <string name="drivers_using_restart">%1$s %2$s használatban. A megjelenítő-illesztőprogram a BrainDeck újraindítása után lép érvénybe.</string>
+    <string name="drivers_using_restart">%1$s %2$s használatban. A megjelenítő-illesztőprogram a GonDeck újraindítása után lép érvénybe.</string>
     <string name="drivers_not_a_driver">Nem illesztőprogram zip: nem AdrenoTools-illesztőprogram, nem -Linux Turnip és nem Android + Linux csomag</string>
     <string name="drivers_import_failed">Importálás sikertelen: %1$s</string>
     <string name="drivers_imported_unnamed">Illesztőprogram importálva</string>
     <string name="drivers_using_bundle">%1$s használatban mind futtatókörnyezet-, mind megjelenítő-illesztőprogramként.</string>
-    <string name="drivers_using_bundle_restart">%1$s használatban mind futtatókörnyezet-, mind megjelenítő-illesztőprogramként. A megjelenítő-illesztőprogram a BrainDeck újraindítása után lép érvénybe.</string>
+    <string name="drivers_using_bundle_restart">%1$s használatban mind futtatókörnyezet-, mind megjelenítő-illesztőprogramként. A megjelenítő-illesztőprogram a GonDeck újraindítása után lép érvénybe.</string>
     <string name="drivers_deleted_bundle">%1$s törölve (mindkét illesztőprogram)</string>
     <string name="drivers_deleted">%1$s törölve</string>
     <string name="drivers_release_status">Legújabb: %1$s · ellenőrizve: %2$s</string>
@@ -1264,7 +1264,7 @@
         <item quantity="one">%1$d napja</item>
         <item quantity="other">%1$d napja</item>
     </plurals>
-    <string name="drivers_checking_sources">A Banners-Turnip, a WinNative és a BrainDeck ellenőrzése…</string>
+    <string name="drivers_checking_sources">A Banners-Turnip, a WinNative és a GonDeck ellenőrzése…</string>
     <string name="drivers_check_failed">ellenőrzés sikertelen</string>
     <string name="drivers_installed_pick_either">%1$s telepítve – válassza ki bármelyik listában mindkét illesztőprogram beállításához</string>
     <string name="drivers_installed_pick">%1$s telepítve – válassza ki a menüben</string>
@@ -1639,7 +1639,7 @@
     <string name="adbfix_no_pairing">Nincs mentett vezeték nélküli hibakeresés-párosítás</string>
     <string name="adbfix_enter_address">Adja meg a vezeték nélküli hibakeresés jelenlegi IP-címét és portját</string>
 
-    <string name="adbpair_timed_out">Időtúllépés a párosítási felugró ablakra várva. Próbálja újra a BrainDeckből.</string>
+    <string name="adbpair_timed_out">Időtúllépés a párosítási felugró ablakra várva. Próbálja újra a GonDeckből.</string>
     <string name="adbpair_discovery_failed_code">Nem sikerült megkeresni a párosítási felugró ablakot (%1$d). Ellenőrizze, hogy a Wi-Fi be van kapcsolva.</string>
     <string name="adbpair_discovery_failed">Nem sikerült megkeresni a párosítási felugró ablakot: %1$s</string>
     <string name="adbpair_six_digits">Írja be a kód mind a 6 számjegyét</string>
@@ -1661,20 +1661,20 @@
     <string name="adbpair_enter_code">Kód megadása</string>
     <string name="adbpair_title_working">A Steam beállítása</string>
     <string name="adbpair_title_done">A Steam készen áll</string>
-    <string name="adbpair_done_text">Koppintson a BrainDeckhez való visszatéréshez. A vezeték nélküli hibakeresést most kikapcsolhatja.</string>
+    <string name="adbpair_done_text">Koppintson a GonDeckhez való visszatéréshez. A vezeték nélküli hibakeresést most kikapcsolhatja.</string>
     <string name="adbpair_title_failed">A vezeték nélküli hibakeresés beállítása megállt</string>
 
     <string name="selfinst_http">A letöltés HTTP %1$d választ adott</string>
     <string name="selfinst_size_mismatch">A letöltés mérete nem egyezett a közzétett APK-val, és elvetésre került – próbálja újra</string>
     <string name="selfinst_checksum_mismatch">A letöltés nem egyezett az ellenőrzőösszegével, és elvetésre került – próbálja újra</string>
     <string name="selfinst_wrong_package">A frissítés a %1$s Android-csomaghoz tartozik, nem a %2$s-hez</string>
-    <string name="selfinst_metadata_signer">A frissítés metaadatai nem nevezik meg a BrainDeck kiadási aláírókulcsát</string>
+    <string name="selfinst_metadata_signer">A frissítés metaadatai nem nevezik meg a GonDeck kiadási aláírókulcsát</string>
     <string name="selfinst_unreadable">Az Android nem tudta beolvasni a letöltött APK-t</string>
     <string name="selfinst_apk_wrong_package">A letöltött APK a %1$s-hez tartozik, nem a %2$s-hez</string>
     <string name="selfinst_version_mismatch">A letöltött APK %1$d versionCode-ot ad meg, nem a közzétett %2$d-t</string>
     <string name="selfinst_downgrade">Az Android nem telepíti a %1$d versionCode-ot a telepített %2$d fölé</string>
     <string name="selfinst_no_signing">A letöltött APK nem tartalmaz aláírási információt</string>
-    <string name="selfinst_wrong_signer">A letöltött APK nincs aláírva a BrainDeck kiadási kulcsával</string>
+    <string name="selfinst_wrong_signer">A letöltött APK nincs aláírva a GonDeck kiadási kulcsával</string>
     <string name="appupd_http">A frissítési katalógus HTTP %1$d választ adott</string>
 
     <string name="loadstate_starting">A munkamenet indítása…</string>
@@ -1700,7 +1700,7 @@
     <string name="pextra_installing">%1$s telepítése</string>
     <string name="pextra_install_failed">A %1$s telepítése sikertelen (kilépési kód: %2$d)</string>
     <string name="pextra_could_not_install">Nem sikerült telepíteni a %1$s-t</string>
-    <string name="esync_fetching">braindeck-esync csomag letöltése</string>
+    <string name="esync_fetching">gondeck-esync csomag letöltése</string>
 
     <string name="cmgr_fex_linux_helpers">Linux segédprogramokkal</string>
     <string name="cmgr_fex_dlls_only">Csak DLL-ek</string>
@@ -1758,7 +1758,7 @@
     <string name="gpuinfo_supported">Támogatott</string>
     <string name="gpuinfo_experimental">Kísérleti: az illesztőprogramjai teszt buildek</string>
     <string name="gpuinfo_below_tested">A tesztelt hardver alatt (Adreno 725 és újabb): lehet, hogy nem fut</string>
-    <string name="gpuinfo_unsupported">Nem támogatott: a BrainDecknek Adreno (Snapdragon) GPU szükséges</string>
+    <string name="gpuinfo_unsupported">Nem támogatott: a GonDecknek Adreno (Snapdragon) GPU szükséges</string>
 
     <string name="turnip_rate_limited">A GitHub korlátja elérve – próbálja újra később</string>
     <string name="turnip_github_http">A GitHub HTTP %1$d választ adott</string>
@@ -1801,10 +1801,10 @@
     <string name="phantom_instructions_not_applicable">Ez az Android-verzió nem használja ezt a korlátot.</string>
     <string name="phantom_fix_toggle">Kapcsolja be a „Gyermekfolyamat-korlátozások letiltása” lehetőséget a Fejlesztői beállításokban, és utána hagyja bekapcsolva a Fejlesztői beállításokat.</string>
     <string name="phantom_fix_no_toggle">Ehhez az Android-verzióhoz nincs kapcsoló. Használja a vezeték nélküli hibakeresést a módosításához erről az eszközről.</string>
-    <string name="upd_block_no_apk">Ehhez a buildhez nincs letöltés a BrainDeck ezen másolatához.</string>
+    <string name="upd_block_no_apk">Ehhez a buildhez nincs letöltés a GonDeck ezen másolatához.</string>
     <string name="upd_block_version_code">Az Android nem telepíti ezt a buildet fölé, mert a %1$d versionCode-ja a telepített %2$d alatt van.</string>
     <string name="upd_fail_downgrade">Az Android nem telepít régebbi verziót egy újabb fölé. Maradjon ezen a buildon, amíg a csatorna felzárkózik.</string>
-    <string name="upd_fail_signature">Ez a BrainDeck-másolat másként van aláírva (talán egy helyi build?), így az Android nem frissíti a helyén.</string>
+    <string name="upd_fail_signature">Ez a GonDeck-másolat másként van aláírva (talán egy helyi build?), így az Android nem frissíti a helyén.</string>
     <string name="upd_fail_storage">Nincs elég szabad hely a frissítéshez.</string>
     <string name="upd_fail_aborted">A frissítés megszakítva.</string>
     <string name="upd_fail_with_message">A frissítés nem települt: %1$s</string>
@@ -1829,7 +1829,7 @@
     <string name="gstore_volume_free">%1$s · %2$s szabad</string>
     <string name="mode_storage_auto_short">Automatikus</string>
     <string name="appupd_catalog_rejected">A frissítési katalógus nem ment át az ellenőrzéseken (%1$s)</string>
-    <string name="main_adb_clip_label">BrainDeck gyermekfolyamat-beállítás</string>
+    <string name="main_adb_clip_label">GonDeck gyermekfolyamat-beállítás</string>
     <string name="setup_signed_in_offline_unnamed">Bejelentkezve · offline mód</string>
     <string name="setup_signed_in_unnamed">Bejelentkezve</string>
     <string name="driver_tag_bundled">CSOMAGOLT</string>
@@ -2145,7 +2145,7 @@
     <string name="touch_speed_normal">Normál</string>
     <string name="touch_speed_fast">Gyors</string>
     <string name="touch_edit_layout">Elrendezés szerkesztése</string>
-    <string name="touch_braindeck_menu">BrainDeck menü</string>
+    <string name="touch_gondeck_menu">GonDeck menü</string>
     <string name="touch_drag_hint">Húzd a vezérlőket a képernyőre</string>
     <string name="touch_arrange">Elrendezés</string>
     <string name="touch_discard">Elvetés</string>

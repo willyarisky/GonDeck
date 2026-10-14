@@ -72,6 +72,7 @@ if (TARGET dxbc AND EXISTS ${DROIDDECK_FRAMEGEN_LSFG_DIR}/lsfg_engine.cpp
     target_include_directories(droiddeckwayland PRIVATE
             ${CMAKE_CURRENT_SOURCE_DIR}/..
             ${CMAKE_CURRENT_SOURCE_DIR}/../framegen
+            ${ANDROID_NDK}/sources/third_party/vulkan/src/include
     )
     target_compile_options(droiddeckwayland PRIVATE
             $<$<COMPILE_LANGUAGE:CXX>:-std=c++17 -fvisibility=hidden>)
